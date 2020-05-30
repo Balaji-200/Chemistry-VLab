@@ -1,0 +1,12 @@
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+nav{
+    border-bottom: 1px solid;
+}
+.row-content{
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    min-height: 400px;
+}

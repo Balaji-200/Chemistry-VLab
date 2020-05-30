@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chemistry</title>
+</head>
+
+<body>
+    <nav class="mb-3 navbar navbar-light navbar-expand-sm bg-light fixed-top text-dark ">
+        <div class="container justify-content-center">
+            <a href="#" class="navbar-brand">
+                <h2>Chemistry V-Labs</h2>
+            </a>
+        </div>
+    </nav>
+    <div class="congo row"></div>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-12">
+                <h3>Experiment : To Estimate the amount of Zinc in the sample of Brass.</h3>
+            </div>
+            <div class="col-12 col-md-9">
+                <form class="CustomizationForm" novalidate id="CustomizationForm">
+                    <div class="form-group row">
+                        <label for="solInflask" class="col-form-label col-md-3">Solution in flask :</label>
+                        <select class="form-control col-md-9" name="solInflask" id="solInflask">
+                            <option selected>-- Select the solution in Flask</option>
+                            <option value="brass">10ml dilute Brass solution + 3ml buffer</option>
+                            <option value="nickel">10ml stainless steel solution + 5ml buffer</option>
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <label for="solInburette" class="col-form-label col-md-3">Solution in burrette :</label>
+                        <select name="solInburette" id="solInburette" class="form-control col-md-9">
+                            <option selected>-- Select the solution in Burette</option>
+                            <option value="0.02">0.02M Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
+                            <option value="0.1">0.1N Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Indicator" class="col-form-label col-md-3">Indicator :</label>
+                        <select name="Indicator" id="indicator" class="form-control col-md-9">
+                            <option selected>--Select an appropriate Indicator</option>
+                            <option value="mureOxide">MureOxide</option>
+                            <option value="E.B.T">Eriochrome Black-T (EBT)</option>
+                            <option value="metyl">Methyl Orange</option>
+                            <option value="kmno4">Potassium PerManganate <span>(KMnO&#x2084;)</span></option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-5">
+                            <div class="form-group row">
+                            <label for="endpt" class="col-form-label col-md-4">End Point :</label>
+                            <select name="endpt" id="endpt" class="col-12 col-md-8">
+                                <option selected>-- Select End Point</option>
+                                <option value="y-v">Yellow to Violet</option>
+                                <option value="w-r">Wine Red to Blue</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-6 offset-md-1">
+                            <div class="form-group row">
+                            <label for="pilot" class="col-form-label col-md-4">Pilot Reading :</label>
+                            <select name="pilot" id="pilot" class="col-12 col-md-8">
+                                <option selected>-- Select Pilot Reading</option>
+                                <option value="1.0">1ml to 2ml</option>
+                                <option value="2.0">2ml to 3ml</option>
+                                <option value="3.0">3ml to 4ml</option>
+                                <option value="4.0">4ml to 5ml</option>
+                                <option value="5.0">5ml to 6ml</option>
+                                <option value="6.0">6ml to 7ml</option>
+                                <option value="7.0">7ml to 8ml</option>
+                                <option value="8.0">8ml to 9ml</option>
+                                <option value="9.0">9ml to 10ml</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cbr" class="col-form-label col">Constant Burrete Reading (C.B.R)</label>
+                        <input type="number" value="0" step="0.1" id="cbr" class="form-control col">
+                    </div>
+                    <div class="form-group row">
+                        <label for="Answer" class="col-form-label col-md col-12">100gm Brass Solution contains :</label>
+                        <input type="text" id="ans" class="form-control col-md col" placeholder="Your Answer Here">
+                        <label class="col-form-label col-md col">gm Zinc <span class="text-danger">(upto 4-decimal places.)</span></label>
+                    </div>
+                    <div class="row">
+                        <button type="button" id="check" class="col-8 btn btn-primary btn-block btn-small">Check</button>
+                        <button type="reset" id="reset" class="col-3 offset-1 btn btn-small btn-secondary">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="errorModal" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-danger">Wrong</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="params"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-small" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="congo" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Congratulations!!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="text-success">Right Answer</p>
+                <p>You have <span class="text-success">Successfully</span> performed your experiment.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-small" data-dismiss="modal">Ok</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
