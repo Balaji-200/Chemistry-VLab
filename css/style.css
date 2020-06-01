@@ -1,12 +1,37 @@
 body{
-    padding: 50px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     z-index: 0;
-}
-nav{
-    border-bottom: 1px solid;
 }
 .row-content{
     margin: 0px auto;
     padding: 50px 0px 50px 0px;
     min-height: 400px;
+}
+canvas{
+    display: block;
+}
+.simulator{
+    border: 1px ridge;
+}
+.navbar{
+    border-bottom: 1px solid;
+}
+.container{
+    padding: 0px;
+}
+.row{
+    margin: 0px;
+    padding: 10px;
+}
+#canvas{
+    border: 0.5px solid;
+    background-color: red;
+    height: 500px;
+    min-height: 500px;
+    display: block;
+}
+@media only screen and (min-width : 992px){
+    #canvas{
+        height: 700px;
+    }
 }
