@@ -18,7 +18,7 @@
     <div class="container">
         <ol class="col-12 breadcrumb">
             <li class="breadcrumb-item"><a href="../index.html">Experiment</a></li>
-            <li class="breadcrumb-item active"><a href="#">Simulation</a></li>
+            <li class="breadcrumb-item active">Simulation</li>
         </ol>
     </div>
     <div class="container simulator">
@@ -35,13 +35,15 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 align-self-center">
-                    <button class="btn btn-primary mt-5 btn-block btn-small">Start</button>
-                    <button class="btn btn-danger btn-block btn-small">Stop</button>
+                    <button class="btn btn-primary mt-5 btn-block btn-small" id="start">Start</button>
+                    <button class="btn btn-danger btn-block btn-small" id="stop">Stop</button>
+                    <button class="btn btn-secondary btn-block btn-small" id="reset">Reset</button>
                    </div>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="../node_modules/three/build/three.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script> -->
     <script src="../js/animation.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

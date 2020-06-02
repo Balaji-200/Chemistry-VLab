@@ -20,71 +20,86 @@
     </nav>
     <div class="container">
         <ol class="col-12 breadcrumb">
-            <li class="breadcrumb-item active"><a href="#">Experiment</a></li>
+            <li class="breadcrumb-item active">Experiment</li>
             <li class="breadcrumb-item"><a href="pages/simulation.html">Simulation</a></li>
         </ol>
     </div>
     <div class="container">
-        <div class="row row-content">
-            <div class="col-12">
-                <h3>Experiment : To Estimate the amount of Zinc in the sample of Brass.</h3>
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h3><u>Experiment</u> : To Estimate the amount of Zinc in the sample of Brass.</h3>
             </div>
-            <div class="col-12 col-md-9">
-                <form class="CustomizationForm" novalidate id="CustomizationForm">
-                    <div class="form-group row">
-                        <label for="solInflask" class="col-form-label col-md-3">Solution in flask :</label>
-                        <select class="form-control col-md-9" name="solInflask" id="solInflask">
-                            <option selected>-- Select the solution in Flask</option>
-                            <option value="brass">10ml dilute Brass solution + 3ml buffer</option>
-                            <option value="nickel">10ml stainless steel solution + 5ml buffer</option>
-                        </select>
-                    </div>
-                    <div class="form-group row">
-                        <label for="solInburette" class="col-form-label col-md-3">Solution in burrette :</label>
-                        <select name="solInburette" id="solInburette" class="form-control col-md-9">
-                            <option selected>-- Select the solution in Burette</option>
-                            <option value="0.02">0.02M Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
-                            <option value="0.1">0.1N Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
-                        </select>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Indicator" class="col-form-label col-md-3">Indicator :</label>
-                        <select name="Indicator" id="indicator" class="form-control col-md-9">
-                            <option selected>--Select an appropriate Indicator</option>
-                            <option value="mureOxide">MureOxide</option>
-                            <option value="E.B.T">Eriochrome Black-T (EBT)</option>
-                            <option value="metyl">Methyl Orange</option>
-                            <option value="kmno4">Potassium PerManganate <span>(KMnO&#x2084;)</span></option>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-5">
-                            <div class="form-group row">
-                            <label for="endpt" class="col-form-label col-md-4">End Point :</label>
-                            <select name="endpt" id="endpt" class="col-12 col-md-8">
-                                <option selected>-- Select End Point</option>
-                                <option value="y-v">Yellow to Violet</option>
-                                <option value="w-r">Wine Red to Blue</option>
+            <div class="col-12 mb-5">
+                <h4><u>Diagram</u>:</h4>
+            </div>
+            <div class="col-12">
+                <img src="assets/chemix (1).png" alt="diagram" class="img-fluid d-block">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row row-content">
+            <div class="form">
+
+                <div class="col-12 mt-3">
+                    <h4><u>Calculations</u>:</h4>
+                </div>
+                <div class="col-12 col-md-9">
+                    <form class="CustomizationForm" novalidate id="CustomizationForm">
+                        <div class="form-group row">
+                            <label for="solInflask" class="col-form-label col-md-3">Solution in flask :</label>
+                            <select class="form-control col-md-9" name="solInflask" id="solInflask">
+                                <option selected>-- Select the solution in Flask</option>
+                                <option value="brass">10ml dilute Brass solution + 3ml buffer</option>
+                                <option value="nickel">10ml stainless steel solution + 5ml buffer</option>
                             </select>
                         </div>
-                        </div>
-                        <div class="col-12 col-md-6 offset-md-1">
-                            <div class="form-group row">
-                            <label for="pilot" class="col-form-label col-md-4">Pilot Reading :</label>
-                            <select name="pilot" id="pilot" class="col-12 col-md-8">
-                                <option selected>-- Select Pilot Reading</option>
-                                <option value="1.0">1ml to 2ml</option>
-                                <option value="2.0">2ml to 3ml</option>
-                                <option value="3.0">3ml to 4ml</option>
-                                <option value="4.0">4ml to 5ml</option>
-                                <option value="5.0">5ml to 6ml</option>
-                                <option value="6.0">6ml to 7ml</option>
-                                <option value="7.0">7ml to 8ml</option>
-                                <option value="8.0">8ml to 9ml</option>
-                                <option value="9.0">9ml to 10ml</option>
+                        <div class="form-group row">
+                            <label for="solInburette" class="col-form-label col-md-3">Solution in burrette :</label>
+                            <select name="solInburette" id="solInburette" class="form-control col-md-9">
+                                <option selected>-- Select the solution in Burette</option>
+                                <option value="0.02">0.02M Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
+                                <option value="0.1">0.1N Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
                             </select>
                         </div>
+                        <div class="form-group row">
+                            <label for="Indicator" class="col-form-label col-md-3">Indicator :</label>
+                            <select name="Indicator" id="indicator" class="form-control col-md-9">
+                                <option selected>--Select an appropriate Indicator</option>
+                                <option value="mureOxide">MureOxide</option>
+                                <option value="E.B.T">Eriochrome Black-T (EBT)</option>
+                                <option value="metyl">Methyl Orange</option>
+                                <option value="kmno4">Potassium PerManganate <span>(KMnO&#x2084;)</span></option>
+                            </select>
                         </div>
+                        <div class="row">
+                            <div class="col-12 col-md-5">
+                                <div class="form-group row">
+                                    <label for="endpt" class="col-form-label col-md-4">End Point :</label>
+                                    <select name="endpt" id="endpt" class="col-12 col-md-8">
+                                        <option selected>-- Select End Point</option>
+                                        <option value="y-v">Yellow to Violet</option>
+                                        <option value="w-r">Wine Red to Blue</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 offset-md-1">
+                                <div class="form-group row">
+                                    <label for="pilot" class="col-form-label col-md-4">Pilot Reading :</label>
+                                    <select name="pilot" id="pilot" class="col-12 col-md-8">
+                                        <option selected>-- Select Pilot Reading</option>
+                                        <option value="1.0">1ml to 2ml</option>
+                                        <option value="2.0">2ml to 3ml</option>
+                                        <option value="3.0">3ml to 4ml</option>
+                                        <option value="4.0">4ml to 5ml</option>
+                                        <option value="5.0">5ml to 6ml</option>
+                                        <option value="6.0">6ml to 7ml</option>
+                                        <option value="7.0">7ml to 8ml</option>
+                                        <option value="8.0">8ml to 9ml</option>
+                                        <option value="9.0">9ml to 10ml</option>
+                                    </select>
+                                </div>
+                            </div>
                     </div>
                     <div class="form-group row">
                         <label for="cbr" class="col-form-label col">Constant Burrete Reading (C.B.R)</label>
@@ -99,6 +114,7 @@
                         <button type="button" id="check" class="col-8 btn btn-primary btn-block btn-small">Check</button>
                         <button type="reset" id="reset" class="col-3 offset-1 btn btn-small btn-secondary">Reset</button>
                     </div>
+                </div>
                 </form>
             </div>
         </div>
