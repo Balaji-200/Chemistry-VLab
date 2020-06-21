@@ -23,18 +23,6 @@ canvas{
     margin: 0px;
     padding: 10px;
 }
-#canvas{
-    border: 0.5px solid;
-    background-color: red;
-    height: 500px;
-    min-height: 500px;
-    display: block;
-}
 .form{
     border: 1px ridge;
-}
-@media only screen and (min-width : 992px){
-    #canvas{
-        height: 700px;
-    }
 }
