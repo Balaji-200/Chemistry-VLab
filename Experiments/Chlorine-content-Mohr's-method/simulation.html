@@ -46,7 +46,7 @@
         <div class="row">
           <div class="col-12 col-md-8">
             <div class="container">
-              <video class="container" id="video" >
+              <video class="container" id="video" preload="auto">
                 <source src="../../assets/brass_exp.mkv" />
               </video>
             </div>
@@ -85,8 +85,8 @@
                           <label for="solInflask" class="col-form-label col-md-3">Solution in flask :</label>
                           <select class="form-control col-md-9" name="solInflask" id="solInflask">
                               <option selected>-- Select the solution in Flask</option>
-                              <option value="chlorine">25ml Water Sample</option>
                               <option value="brass">10ml dilute Brass solution + 3ml buffer</option>
+                              <option value="chlorine">25ml Water Sample</option>
                               <option value="nickel">10ml stainless steel solution + 5ml buffer</option>
                           </select>
                       </div>
@@ -95,8 +95,8 @@
                           <select name="solInburette" id="solInburette" class="form-control col-md-9">
                               <option selected>-- Select the solution in Burette</option>
                               <option value="0.02">0.02M Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
-                              <option value="0.1">0.1N Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
                               <option value="0.0141">0.0141N Silver Nitrate(AgNO&#x2083;)</option>
+                              <option value="0.1">0.1N Ethylene Diamine Tetra Acetic Acid (EDTA)</option>
                           </select>
                       </div>
                       <div class="form-group row">
@@ -104,8 +104,8 @@
                           <select name="Indicator" id="indicator" class="form-control col-md-9">
                               <option selected>--Select an appropriate Indicator</option>
                               <option value="mureOxide">MureOxide</option>
-                              <option value="k2cro4">1ml Potassium Chromate(K&#x2082;CrO&#x2084;)</option>
                               <option value="E.B.T">Eriochrome Black-T (EBT)</option>
+                              <option value="k2cro4">1ml Potassium Chromate(K&#x2082;CrO&#x2084;)</option>
                               <option value="metyl">Methyl Orange</option>
                               <option value="kmno4">Potassium PerManganate <span>(KMnO&#x2084;)</span></option>
                           </select>
@@ -115,8 +115,8 @@
                                   <select name="endpt" id="endpt" class="form-control col-md">
                                       <option selected>-- Select End Point</option>
                                       <option value="y-v">Yellow to Violet</option>
-                                      <option value="w-r">Wine Red to Blue</option>
                                       <option value="y-py">Yellow to Pinkish Yellow</option>
+                                      <option value="w-r">Wine Red to Blue</option>
                                   </select>
                           </div>
                               <div class="form-group row">
@@ -138,10 +138,10 @@
                       <label for="cbr" class="col-form-label col">Constant Burrete Reading (C.B.R)</label>
                       <input type="number" value="0" step="0.1" id="cbr" class="form-control col">
                   </div>
-                  <div class="form-group row">
-                      <label for="Answer" class="col-form-label col-md col-12">100gm Brass Solution contains :</label>
+                  <div class="form-group row align-items-center">
+                      <label for="Answer" class="col-form-label col-md col-12">Chlorine ion Concentration :</label>
                       <input type="text" id="ans" class="form-control col-md col" placeholder="Your Answer Here">
-                      <label class="col-form-label col-md col">gm Zinc <span class="text-danger">(upto 4-decimal places.)</span></label>
+                      <label class="col-form-label col-md col">mg/L <span class="text-danger">(upto 4-decimal places.)</span></label>
                   </div>
                   <div class="row">
                       <button type="button" id="check" class="col-8 btn btn-success btn-block btn-small">Check</button>
@@ -200,6 +200,30 @@
       crossorigin="anonymous"
     ></script>
 
+      <!-- Script for video player -->
+      <script>
+        const video = document.getElementById("video");
+        var value = document.getElementById("op");
+        var count = 0;
+        var val = 0;
+       $("button#start").click(function () {
+          video.play();
+          val = setInterval(()=>{
+          count+=Math.random()*2.5;
+          value.innerHTML = count.toFixed(1);
+        },1600);
+        });
+        $("button#stop").click(function (){
+            video.pause();
+            clearInterval(val);
+        })
+        $("button#reset").click(function (){
+            video.load();
+            clearInterval(val);
+            count = 0;
+            value.innerHTML = count;
+        })
+      </script>
 
     <!-- Script to Check answers -->
     <script>
@@ -221,10 +245,10 @@
       endpt = $(this).children("option:selected").val()
   });
   $('#check').on('click',function(){
-      if(solInburette==0.1 && solInflask=='brass' && indi=='E.B.T' && endpt=='w-r' 
+      if(solInburette==0.0141 && solInflask=='chlorine' && indi=='k2cro4' && endpt=='y-py' 
       && Calculate($('input#cbr').val(),$('input#ans').val())){
           $('#congo').modal('show')
-      }else if(!(solInburette==0.1 && solInflask=='brass' && indi=='E.B.T' && endpt=='w-r')){
+      }else if(!(solInburette==0.0141 && solInflask=='chlorine' && indi=='k2cro4' && endpt=='y-py')){
           $('p#params').text('Please select appropriate parameters for the experiment')
           $('#errorModal').modal('show')
       }else{
@@ -241,9 +265,9 @@
   })
 })
 function Calculate(val,ans){
-  var op=32.7*val*0.1;
+  var op=35.45*0.0141*val*1000/25;
   var a=parseFloat(ans)
-  for(let i=6;i>=1;i--){
+  for(let i=7;i>=1;i--){
       if(op.toPrecision(i)==a){
           return true;
       }
@@ -251,30 +275,5 @@ function Calculate(val,ans){
 }
   </script>
 
-
-  <!-- Script for video player -->
-    <script>
-      const video = document.getElementById("video");
-      var value = document.getElementById("op");
-      var count = 0;
-      var val = 0;
-     $("button#start").click(function () {
-        video.play();
-        val = setInterval(()=>{
-        count+=Math.random()*2.5;
-        value.innerHTML = count.toFixed(1);
-      },1600);
-      });
-      $("button#stop").click(function (){
-          video.pause();
-          clearInterval(val);
-      })
-      $("button#reset").click(function (){
-          video.load();
-          clearInterval(val);
-          count = 0;
-          value.innerHTML = count;
-      })
-    </script>
   </body>
 </html>
