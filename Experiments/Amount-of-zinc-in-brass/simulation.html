@@ -22,6 +22,9 @@
           <h2>Chemistry V-Labs</h2>
         </a>
       </div>
+      <div class="container justify-content-center">
+        <a href="../../index.html" type="button" class="btn btn-outline-primary">&#x1F3E0; Home</a>
+      </div>
     </nav>
     <div class="container">
       <div class="row">
@@ -46,7 +49,7 @@
         <div class="row">
           <div class="col-12 col-md-8">
             <div class="container">
-              <video class="container" id="video" >
+              <video class="container" id="video">
                 <source src="../../assets/brass_exp.mkv" />
               </video>
             </div>
@@ -268,13 +271,13 @@ function Calculate(val,ans){
       $("button#stop").click(function (){
           video.pause();
           clearInterval(val);
-      })
+      });
       $("button#reset").click(function (){
           video.load();
           clearInterval(val);
           count = 0;
           value.innerHTML = count;
-      })
+      });
     </script>
   </body>
 </html>
