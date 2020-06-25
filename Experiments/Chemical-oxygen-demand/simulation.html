@@ -36,4 +36,209 @@
         <div class="col-12 mt-2">
             <h3><u>Experiment</u> : To determine COD of the given water sample.</h3>
         </div>
+        </div>
     </div>
+      <!-- Simulation -->
+      <div class="container simulator">
+        <div class="navbar navbar-light navbar-expand-sm bg-light text-dark">
+          <div class="navbar-brand">
+            <h3>Simulation</h3>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 ">
+              <div class="form-group row align-items-center">
+                <label for="titration" class="col-form-label col-md-3"><span class="h3">Titration :</span></label>
+                <select name="titration" id="titration" class="col-md-9 form-control">
+                  <option selected>-- Select titration for VBlank or VBack</option>
+                  <option value="blank">VBlank</option>
+                  <option value="back">VBack</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-md-8 mt-4">
+              <div class="container">
+                <video class="container" id="video" preload="auto" >
+                  <source src="../../assets/COD_exp.mkv" />
+                </video>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 align-self-center mt-5">
+                <hr>
+                <div class="container pl-0 pr-0">
+                    <h4 class="text-center">V<sub>Blank</sub> Reading:  <span id="op1">0</span> ml</h4>
+                    <h4 class="text-center">V<sub>Back</sub> Reading:  <span id="op2">0</span> ml</h4>
+                </div>
+                <hr>
+              <button class="btn btn-primary btn-block btn-small" id="start">
+                Start
+              </button>
+              <button class="btn btn-danger btn-block btn-small" id="stop">
+                Stop
+              </button>
+              <button class="btn btn-secondary btn-block btn-small" id="reset">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Observations & Calculation form -->
+      <div class="container mt-5">
+        <div class="row row-content justify-content-center">
+            <div class="form">
+  
+                <div class="col-12 mt-3">
+                    <h4><u>Calculations</u>:</h4>
+                </div>
+                <div class="col-12 col-md-9">
+                    <form class="CustomizationForm" novalidate id="CustomizationForm">
+                    <div class="form-group row align-items-center">
+                        <label for="cbr" class="col-form-label col"><span class="h4">V<sub>Blank</sub></span></label>
+                        <input type="number" value="0" step="0.1" id="vblank" class="form-control col">
+                    </div>
+                    <div class="form-group row align-items-center">
+                      <label for="cbr" class="col-form-label col"><span class="h4">V<sub>Back</sub></span></label>
+                      <input type="number" value="0" step="0.1" id="vback" class="form-control col">
+                  </div>
+                    <div class="form-group row align-items-center">
+                        <label for="Answer" class="col-form-label col-md col-12"><span class="h5">Chemical Oxygen Demand (COD) :</span></label>
+                        <input type="text" id="ans" class="form-control col-md col" placeholder="Your Answer Here">
+                        <label class="col-form-label col-md col">mg/L <span class="text-danger">(upto 4-decimal places.)</span></label>
+                    </div>
+                    <div class="row">
+                        <button type="button" id="check" class="col-8 btn btn-success btn-block btn-small">Check</button>
+                        <button type="reset" id="reset" class="col-3 offset-1 btn btn-small btn-danger">Reset</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal to display Correction status of the answers -->
+    <div class="modal fade" id="errorModal" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-danger">Wrong</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="params"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-small" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="congo" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Congratulations!!!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="text-success">Right Answer</p>
+                <p>You have <span class="text-success">Successfully</span> performed your experiment.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-small" data-dismiss="modal">Ok</button>
+            </div>
+            </div>
+        </div>
+    </div>
+      <!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"
+      ></script>
+  
+        <!-- Script for video player -->
+        <script>
+          const video = document.getElementById("video");
+          var blank = document.getElementById("op1");
+          var back  = document.getElementById('op2');
+          var count;
+          var val = 0;
+         $("button#start").click(function () {
+            if($('select#titration').children('option:selected').val() == "blank"){
+            count = 0;
+            video.currentTime = 0;
+            video.play();
+              val = setInterval(()=>{
+              count+=Math.random()*2.5 + 1;
+              blank.innerText = count.toFixed(1);
+          },1600);
+            }
+            else if($('select#titration').children('option:selected').val() == "back"){
+              count = 0;
+              video.currentTime = 0;
+              video.play();
+              val = setInterval(()=>{
+            count+=Math.random()*2 + 0.5;
+            back.innerText = count.toFixed(1);
+          },1600);
+            }
+            else{
+              $('p#params').text('Please select the appropriate Titration type.');
+              $('#errorModal').modal('show');
+            }
+            
+          });
+          $("button#stop").click(function (){
+              video.pause();
+              clearInterval(val);
+          })
+          $("button#reset").click(function (){
+              video.currentTime = 0;
+              clearInterval(val);
+              count = 0;
+              blank.innerText = 0;
+              back.innerText= 0;
+          })
+        </script>
+  
+      <!-- Script to Check answers -->
+      <script>
+        $(document).ready(function () {
+    var titration;
+    $('select#titration').change(function(){
+      titration = $(this).children('option:selected').val();
+    })
+    $('#check').on('click',function(){
+          if(Calculate($('input#vblank').val(),$('input#vback').val(),$('input#ans').val())==true){
+            $('#congo').modal('show');
+          }
+          else{
+            $('p#params').text('Your answer is wrong , Please check your answer.');
+              $('#errorModal').modal('show');
+          }
+    })
+    $('button#reset').click(function(){
+        $('select#titration').children('option:first').prop('selected','true');
+    })
+  })
+  function Calculate(blank,back,ans){
+    var op = (blank - back)*8000*0.25/50;
+    var a = parseFloat(ans)
+    for(let i=7;i>=1;i--){
+        if(op.toPrecision(i)==a){
+            return true;
+        }
+    }
+  }
+    </script>
+  </body>
+  </html>
