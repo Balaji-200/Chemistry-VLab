@@ -27,7 +27,7 @@ function Level01(){
 
 function createOption(option,id){
     const div = document.createElement('div');
-    div.classList.add('option', 'text-light', 'm-1' ,'justify-content-center','text-center','p-1', 'bg-orange','align-items-center','d-flex');
+    div.classList.add('option','font-weight-light', 'm-1' ,'justify-content-center','text-center','p-1', 'bg-purple','align-items-center','d-flex');
     div.innerText = option;
     div.setAttribute('id',`drag${id}`);
     div.setAttribute('draggable','true');
