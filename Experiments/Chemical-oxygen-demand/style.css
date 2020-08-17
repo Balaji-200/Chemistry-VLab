@@ -3,6 +3,9 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
 .level{
     width: 100%;
     font-size: 2em;
@@ -72,6 +75,39 @@ html{
 .text-margin{
     margin: 30px;
 }
+.range{
+    width: 100%;
+    appearance: none;
+    height: 100px;
+    outline: none;
+    background: linear-gradient(to right,red,yellow,green,blue,indigo);
+}
+.range::-webkit-slider-thumb{
+    appearance: none;
+    height: 110px;
+    width: 10px;
+    background-color:  #e7dcf8;
+    border: 1px ridge #E95420;
+    cursor: pointer;
+}
+.level-05-img{
+    width: 18%;
+    height: 30%;
+}
+.level-05{
+    width: 100%;
+    margin-top: 5em;
+    left: 0%;
+    background-image: url("https://image.shutterstock.com/image-photo/wooden-shelf-white-background-texture-260nw-1316303699.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -12;
+}
+.level-05-option-clicked{
+    filter: opacity(0.3);
+    border: 1px solid #E95420;
+}
 @keyframes opacityAnimation{
     0%{
         opacity: 0;
@@ -111,7 +147,7 @@ html{
 }
 @media screen and (max-width: 600px){
     .h2{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     .dropBox{
         width: 100%;
@@ -119,10 +155,7 @@ html{
         font-size: 0.8em;
     }
     .h3{
-        font-size: 1.5em;
-    }
-    p{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .container{
         padding: 0;
@@ -134,7 +167,7 @@ html{
         width: 100vw;
     }
     p{
-        font-size: 0.8em;
+        font-size: 1rem;
     }
     .level-03-img{
         width: 100px;

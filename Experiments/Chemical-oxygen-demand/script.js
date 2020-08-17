@@ -58,7 +58,6 @@ function allowDrop(ev) {
   function checkLevel01() {
     for(let i = 1 ; i<=4; i++){
         const drop = document.getElementById(`drop${i}`);
-        console.log(drop.innerText);
         for(let j=1;j<=4;j++){
             if(j===i)
                 continue
@@ -79,7 +78,6 @@ function level02(){
     var clicks = 0;
     const options = document.getElementById('Options-02');
     for(let i=0; i<=3 ; i++){
-        console.log(options.children[i]);
         options.children[i].addEventListener('click',()=>{
             if(clicks<2)
             if(!options.children[i].classList.contains('option-clicked'))
@@ -107,7 +105,6 @@ function level03(){
     var clicked = false;
     const options = document.getElementById('Options-03');
     for(let i=0; i<=1 ; i++){
-        console.log(options.children[i]);
         options.children[i].addEventListener('click',()=>{
             if(clicked==false)
                 if(!options.children[i].classList.contains('option-clicked')){
@@ -131,3 +128,72 @@ function checkLevel03(){
                 }
     }
 }
+//#######################################################################################//
+
+function level04(){
+    const slider = document.getElementById('slider')
+    const sliderBubble = document.getElementById('slider-bubble')
+    slider.addEventListener('input',()=>{
+        sliderBubble.innerText = slider.value;
+    })
+}
+function checkLevel04(){
+    const sliderBubble = document.getElementById('slider-bubble');
+    if(parseInt(sliderBubble.innerText)<7)
+        return true;
+    else{
+        alert('Wrong Answer!');
+        location.href = './landing-page.html';
+    }
+}
+
+//#######################################################################################//
+
+function level05() {
+    const options = document.getElementById("Options-05");
+    const next = document.getElementById("next");
+    $(document).ready(()=>{
+        if (next.classList.contains("d-show")) {
+            next.classList.add("d-none");
+            next.classList.remove("d-show");
+            console.log('Yes');
+        }
+    })
+    for (let i = 0; i <= options.children.length - 1; i++) {
+      options.children[i].addEventListener("click", () => {
+        options.children[i].classList.add("level-05-option-clicked");
+      });
+    }
+  }
+
+  function checkPart01() {
+    const options = document.getElementById("Options-05");
+    var count = 0;
+    for (let i = 0; i <= options.children.length - 1; i++) {
+      if (
+        options.children[i].classList.contains("level-05-option-clicked")
+      ) {
+        const attr = options.children[i].getAttribute("alt");
+        if (attr == "KMnO4" || attr == "HNO3" || attr == "K2Cr2O7") count++;
+        else count--;
+      }
+    }
+    if (count == 3) {
+        $("#level-05-part2").modal({ keyboard: false, backdrop: "static" });
+        $("#level-05-part2").modal("toggle");
+    } else {
+      alert("Wrong Try again!");
+      location.href = "./demo.html";
+    }
+  }
+  function checklevel05(){
+      const checked = document.getElementById('level-05-part2-option-3');
+      if(!checked.checked){
+          alert('Wrong Answer!!');
+          location.href = './landing-page.html'
+          return false; 
+      }
+      return true;
+  }
+
+//###################################################################################//
