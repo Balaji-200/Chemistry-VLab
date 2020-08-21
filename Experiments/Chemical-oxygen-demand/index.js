@@ -30,7 +30,20 @@ function Next(){
         case 5:
             if(checklevel05()){
                 nextLevel();
+                level06();
             }
+            break;
+        case 6: 
+            if(checklevel06()){
+                nextLevel();
+                level07();
+            }
+            break;
+        case 7: 
+            if(checklevel07()){
+                nextLevel();
+            }
+            break;
     }
 }
 
@@ -53,7 +66,7 @@ function nextLevel(){
                 nextLevel.classList.add('d-show');
             }
         }
-        levelNo<5?levelNo++:location.href="./experiment.html";
+        levelNo<7?levelNo++:location.href="./experiment.html";
         location.href = `#${nextLevel.id}`;
         location.href = `#top`;
 }

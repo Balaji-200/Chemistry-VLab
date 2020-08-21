@@ -98,7 +98,7 @@ body{
     width: 100%;
     margin-top: 5em;
     left: 0%;
-    background-image: url("https://image.shutterstock.com/image-photo/wooden-shelf-white-background-texture-260nw-1316303699.jpg");
+    background-image: url("./images/shelf.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,6 +107,10 @@ body{
 .level-05-option-clicked{
     filter: opacity(0.3);
     border: 1px solid #E95420;
+}
+.level-06-img{
+    width: 30%;
+    height: 20%;
 }
 @keyframes opacityAnimation{
     0%{
