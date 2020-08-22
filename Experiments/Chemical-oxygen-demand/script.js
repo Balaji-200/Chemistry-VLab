@@ -139,15 +139,20 @@ function checkLevel03() {
 //#######################################################################################//
 
 function level04() {
-  const slider = document.getElementById("slider");
-  const sliderBubble = document.getElementById("slider-bubble");
-  slider.addEventListener("input", () => {
-    sliderBubble.innerText = slider.value;
-  });
+  const options = document.getElementById("level04-options");
+  clickListener(options);
 }
 function checkLevel04() {
-  const sliderBubble = document.getElementById("slider-bubble");
-  if (parseInt(sliderBubble.innerText) < 7) return true;
+  var correctAnswers = 0;
+  const slider = document.getElementById("slider");
+  const options = document.getElementById("level04-options");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("level-05-option-clicked"))
+      if (options.children[i].classList.contains("correct")) correctAnswers++;
+  }
+  console.log(slider.value);
+  if (slider.value < 7) correctAnswers++;
+  if (correctAnswers == 2) return true;
   else {
     alert("Wrong Answer!");
     location.href = "./landing-page.html";
@@ -213,7 +218,7 @@ function level06() {
       next.classList.remove("d-none");
     }
   });
-  for (let i = 0; i <= options.children.length-1; i++) {
+  for (let i = 0; i <= options.children.length - 1; i++) {
     options.children[i].addEventListener("click", () => {
       if (clicks == 0)
         options.children[i].classList.add("level-05-option-clicked");
@@ -246,7 +251,7 @@ function level07() {
 }
 function clickListener(options) {
   var clicks = 0;
-  for (let i = 0; i < options.children.length ; i++) {
+  for (let i = 0; i < options.children.length; i++) {
     options.children[i].addEventListener("click", () => {
       if (clicks == 0)
         options.children[i].classList.add("level-05-option-clicked");
@@ -277,4 +282,26 @@ function checklevel07() {
   }
 }
 
-//###########################################################################################////
+//##############################################################################################//
+
+function level08() {
+  const options = document.getElementById("level08-options");
+  clickListener(options);
+}
+function checklevel08() {
+  var correctAnswer = false;
+  const options = document.getElementById("level08-options");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("level-05-option-clicked"))
+      if (options.children[i].getAttribute("alt") == "F.A.S") {
+        correctAnswer = true;
+      }
+  }
+  if (correctAnswer) return true;
+  else {
+    alert("Wrong Answer, Try Again!!");
+    window.location.href = "./landing-page.html";
+  }
+}
+
+//#############################################################################################//

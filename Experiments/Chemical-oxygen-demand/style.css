@@ -106,7 +106,7 @@ body{
 }
 .level-05-option-clicked{
     filter: opacity(0.3);
-    border: 1px solid #E95420;
+    /* border: 1px solid #E95420; */
 }
 .level-06-img{
     width: 30%;
