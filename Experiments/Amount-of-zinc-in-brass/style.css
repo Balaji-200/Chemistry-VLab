@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+
+body{
+    overflow-x: hidden;
+}
+.level{
+    width: 100%;
+    font-size: 2em;
+    height: 50px;
+    overflow-x: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+.level-transition{
+    animation: level 0.7s ease forwards;
+}
+.slideRight{
+    animation: slideRight 0.7s ease forwards;
+}
+.slideLeft{
+    animation: slideLeft 0.7s ease forwards;
+}
+.opacityAnimation{
+    animation: opacityAnimation 1.2s ease-in forwards;
+}
+@keyframes opacityAnimation{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+@keyframes level {
+    0%{
+        opacity: 0;
+        font-size: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        font-size: 2em;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.bg-yellow-gradient{
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);;
+}
+
+.option-level-01{
+    width: 15vw;
+    height: 15vw;
+    margin: 1em;
+}
+.text-purple{
+    color: purple;
+}
+.option-clicked{
+    opacity: 0.4;
+}
+.option-level-02{
+    width: 20vw;
+    height: 20vw;
+}
+.option{
+    width: 40vw;
+    border-radius: 0.2em;
+    /* font-family: 'Lobster', cursive; */
+}
+.bg-purple{
+    background-color: #e7dcf8;
+}
+.dropBox{
+    width: 150px;
+    height: 150px;
+    border-radius: 0.3em;
+    box-sizing: border-box;
+    font-size: large;
+    font-family: 'Lobster', cursive;
+}
+.bg-success-light{
+    background-color: #e0ffaf;
+}
+@media screen and (max-width: 600px){
+    .h2{
+        font-size: 1.2em;
+    }
+    .h3{
+        font-size: 1em;
+    }
+    .container{
+        padding: 0;
+    }
+    .option-level-01{
+        width: 25vw;
+        height: 25vw;
+        padding: 4px;
+        margin: 0.2em;
+    }
+    .option-level-02{
+        width: 40vw;
+        height: 40vw;
+    }
+    .dropBox{
+        width: 25vw;
+        height: 100px;
+        font-size: 0.8em;
+    }
+    .option{
+        width: 43.5vw;
+    }
+}
+@media screen and (max-width: 360px){
+    .option{
+        width: 42vw;
+    }
+}
