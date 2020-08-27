@@ -74,7 +74,12 @@ function checkLevel01() {
       const nextDrop = document.getElementById(`drop${j}`);
       if (drop.innerText == nextDrop.innerText) {
         alert("No two Drop boxes can have same options");
-        return false;
+        return 
+      }
+      if(drop.innerText == 'Nuclear waste'){
+        alert('Wrong Answer!!, Try Again');
+        window.location.href = './landing-page.html';
+        return
       }
     }
   }
@@ -231,7 +236,7 @@ function checklevel06() {
   const reason = document.getElementById("reason");
   for (let i = 0; i <= options.children.length; i++) {
     if (options.children[i].classList.contains("level-05-option-clicked"))
-      if (options.children[i].getAttribute("alt") == "HNO3") {
+      if (options.children[i].getAttribute("alt") == "H2SO4") {
         if (reason.value == "") alert("Please give reason in few words");
         else return true;
       } else {

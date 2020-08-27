@@ -1,9 +1,9 @@
 //################################# GLOBAL DECLARATIONS ###################################################//
-function clickListener(options) {
+function clickListener(options, CSSclass) {
   var clicks = 0;
-  for (let i = 0; i < options.children.length-1; i++) {
+  for (let i = 0; i < options.children.length; i++) {
     options.children[i].addEventListener("click", () => {
-      if (clicks == 0) options.children[i].classList.add("option-clicked");
+      if (clicks == 0) options.children[i].classList.add(CSSclass);
       clicks++;
     });
   }
@@ -11,20 +11,20 @@ function clickListener(options) {
 var durationRight = 0.7;
 var durationLeft = 0.7;
 const level04Options = [
-    "It’s silvery-white and light-weight",
-    "Excellent choice for making decorative pieces",
-    "Yellow Gold color",
-    "Used in electronic applications",
-    "Used in Haber’s process as a catalyst",
-    "High corrosion resistance",
-    "Used in radiation protection",
-    "Highly castable"
-  ];
-  const level04WrongOptions = [
+  "It’s silvery-white and light-weight",
+  "Excellent choice for making decorative pieces",
+  "Yellow Gold color",
+  "Used in electronic applications",
+  "Used in Haber’s process as a catalyst",
+  "High corrosion resistance",
+  "Used in radiation protection",
+  "Highly castable",
+];
+const level04WrongOptions = [
   "It’s silvery-white and light-weight",
   "Used in Haber’s process as a catalyst",
-  "Used in radiation protection"
-  ]
+  "Used in radiation protection",
+];
 //################################## LEVEL-01 ###############################################//
 function level01() {
   const options = document.getElementById("options-level-01");
@@ -61,7 +61,7 @@ function checklevel01() {
 
 function level02() {
   const options = document.getElementById("options-level-02");
-  clickListener(options);
+  clickListener(options, "option-clicked");
 }
 function checklevel02() {
   const options = document.getElementById("options-level-02");
@@ -125,7 +125,7 @@ function createOption(option, id) {
   const div = document.createElement("div");
   div.classList.add(
     "option",
-    "font-weight-light",
+    "font-weight-bold",
     "m-1",
     "justify-content-center",
     "text-center",
@@ -158,9 +158,9 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  document.getElementById(
-    ev.target.id
-  ).innerText = document.getElementById(data).innerText;
+  document.getElementById(ev.target.id).innerText = document.getElementById(
+    data
+  ).innerText;
 }
 
 function checklevel04() {
@@ -175,14 +175,51 @@ function checklevel04() {
         return false;
       }
     }
-    wrongAnswers.push(
-    level04WrongOptions.filter(el=> drop.innerText == el));
+    wrongAnswers.push(level04WrongOptions.filter((el) => drop.innerText == el));
   }
-  if(wrongAnswers.filter(el=> el.length>0).length > 0){
+  if (wrongAnswers.filter((el) => el.length > 0).length > 0) {
     alert("Wrong Answers , Try again");
-        window.location.href = './landing-page.html';
-  }else{
+    window.location.href = "./landing-page.html";
+  } else {
     return true;
+  }
+}
+//####################################################################################//
+function level05() {
+  const options = document.getElementById("options-level-05");
+  clickListener(options, "bg-primary");
+}
+function checklevel05() {
+  const options = document.getElementById("options-level-05");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("bg-primary")) {
+      if (
+        options.children[i].children[0].innerHTML == "Complexometric titration"
+      )
+        return true;
+      else {
+        alert("Wrong Answer!!, Try Again");
+        window.location.href = "./demo.html";
+      }
+    }
+  }
+}
+//####################################################################################//
+function level06() {
+  const options = document.getElementById("options-level-06");
+  clickListener(options, "option-clicked");
+}
+function checklevel06() {
+  const options = document.getElementById("options-level-06");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("option-clicked")) {
+      if (options.children[i].getAttribute("alt") == "EDTA-2")
+      return true;
+      else {
+        alert("Wrong Answer!!, Try Again");
+        window.location.href = "./landing-page.html";
+      }
+    }
   }
 }
 //####################################################################################//
