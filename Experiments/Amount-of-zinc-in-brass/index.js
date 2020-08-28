@@ -10,34 +10,39 @@ function Next() {
       }
       break;
     case 2:
-      if(checklevel02()){
+      if (checklevel02()) {
         level03();
         nextLevel();
       }
       break;
     case 3:
-      if(checklevel03()){
+      if (checklevel03()) {
         nextLevel();
         level04();
       }
       break;
     case 4:
-      if(checklevel04()){
+      if (checklevel04()) {
         level05();
         nextLevel();
       }
       break;
     case 5:
-      if(checklevel05()){
+      if (checklevel05()) {
         level06();
         nextLevel();
       }
       break;
     case 6:
-      if(checklevel06()){
+      if (checklevel06()) {
+        level07();
         nextLevel();
       }
       break;
+    case 7:
+      if (checklevel07()) {
+        nextLevel();
+      }
   }
 }
 
@@ -60,7 +65,7 @@ function nextLevel() {
       nextLevel.classList.add("d-show");
     }
   }
-  levelNo < 6? levelNo++ : (location.href = "./experiment.html");
+  levelNo < 7 ? levelNo++ : (location.href = "./experiment.html");
   location.href = `#${nextLevel.id}`;
   location.href = `#top`;
 }

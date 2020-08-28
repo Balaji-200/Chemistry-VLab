@@ -263,10 +263,11 @@ function Calculate(val,ans){
      $("button#start").click(function () {
         video.play();
         val = setInterval(()=>{
-        count+=Math.random()*2.5;
+        count+=Math.random()+1.8;
         value.innerHTML = count.toFixed(1);
       },1600);
-      });
+    });
+    video.onpause = ()=> clearInterval(val);
       $("button#stop").click(function (){
           video.pause();
           clearInterval(val);

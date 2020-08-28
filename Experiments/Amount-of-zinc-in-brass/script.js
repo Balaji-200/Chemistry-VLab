@@ -213,11 +213,28 @@ function checklevel06() {
   const options = document.getElementById("options-level-06");
   for (let i = 0; i <= options.children.length - 1; i++) {
     if (options.children[i].classList.contains("option-clicked")) {
-      if (options.children[i].getAttribute("alt") == "EDTA-2")
-      return true;
+      if (options.children[i].getAttribute("alt") == "EDTA-2") return true;
       else {
         alert("Wrong Answer!!, Try Again");
         window.location.href = "./landing-page.html";
+      }
+    }   
+  }
+}
+//####################################################################################//
+function level07() {
+  const options = document.getElementById("options-level-07");
+  clickListener(options, "option-clicked");
+}
+function checklevel07() {
+  const options = document.getElementById("options-level-07");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("option-clicked")) {
+      if (options.children[i].getAttribute("alt") == "season_cracking")
+        return true;
+      else {
+        alert("Wrong Answer!!, Try Again");
+        window.location.href = "./demo.html";
       }
     }
   }

@@ -108,6 +108,9 @@ body{
 .option-level-06{
     width: 30vw;
 }
+.option-level-07{
+    width: 30vw;
+}
 @media screen and (max-width: 600px){
     .h2{
         font-size: 1.2em;
@@ -141,6 +144,9 @@ body{
     }
     .option{
         width: 43.5vw;
+    }
+    .option-level-07{
+        width: 100vw;
     }
 }
 @media screen and (max-width: 360px){
