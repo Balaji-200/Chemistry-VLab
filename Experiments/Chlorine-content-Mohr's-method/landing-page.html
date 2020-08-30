@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment-03</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-blue-gradient">
+    <nav
+      class="mb-3 navbar navbar-light navbar-expand-sm bg-light sticky-top text-dark"
+    >
+      <div class="container justify-content-center">
+        <a href="../../index.html" class="navbar-brand">
+          <h2>Chemistry V-Labs</h2>
+        </a>
+      </div>
+      <div class="container justify-content-center">
+        <a href="../../index.html" type="button" class="btn btn-outline-primary"
+          >&#x1F3E0; Home</a
+        >
+      </div>
+    </nav>
+    <div class="container" id="game">
+      <div class="col-12 d-show" id="level-01">
+        <div class="level level-transition text-warning">Level 01</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          <span class="badge bg-warning mr-3 text-dark">?</span>Select the
+          possible sources of Chlorides in Surface or ground water.
+        </h2>
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center opacityAnimation mt-5"
+          id="options-level-01"
+        >
+          <div
+            class="d-flex flex-row rounded justify-content-center bg-option text-center option-level-01 text-dark align-items-center"
+          >
+            <h3 class="h3">Industrial effluents</h3>
+          </div>
+          <div
+            class="d-flex flex-row rounded justify-content-center bg-option text-center option-level-01 text-dark align-items-center"
+          >
+            <h3 class="h3">Inorganic fertilizers</h3>
+          </div>
+          <div
+            class="d-flex flex-row rounded justify-content-center bg-option text-center option-level-01 text-dark align-items-center correct"
+          >
+            <h3 class="h3">Organic farming</h3>
+          </div>
+          <div
+            class="d-flex flex-row rounded justify-content-center bg-option text-center option-level-01 text-dark align-items-center"
+          >
+            <h3 class="h3">Seawater intrusion in coastal areas</h3>
+          </div>
+          <div
+            class="d-flex flex-row rounded justify-content-center bg-option text-center option-level-01 text-dark align-items-center"
+          >
+            <h3 class="h3">Septic tank effluents</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 d-none" id="level-02">
+        <div class="level level-transition text-warning">Level 02</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          Chlorides are leached from various rocks into soil and water by
+          weathering. The chloride ion is highly mobile and is transported to
+          closed basins or oceans.
+        </h2>
+        <h3 class="col-12 text-wheat h3 slideRight mt-3 p-sm p-0">
+          <span class="badge bg-warning mr-3 text-dark">?</span>Select the
+          various analytical methods that can be used to determine concentration
+          of chloride ions in water.
+        </h3>
+        <div class="d-flex justify-content-center flex-wrap">
+          <div
+            class="dropBox-level-02 font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-02-1"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-02-2"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-02-3"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-02-4"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
+        <div
+          class="d-flex flex-wrap align-self-center flex-sm-nowrap mt-3"
+          id="options-level-02"
+        ></div>
+      </div>
+      <div class="col-12 d-none" id="level-03">
+        <div class="level level-transition text-warning">Level 03</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          In the Mohr’s titration method, various colors of the reaction mixture
+          are significant of the reactions taking place.
+        </h2>
+        <h3 class="col-12 text-wheat h3 slideRight mt-3 p-sm p-0">
+          <span class="badge bg-warning mr-3 text-dark">?</span> Match the
+          following colors of reaction mixture with the appropriate reason
+          responsible for the color.
+        </h3>
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center mt-5"
+        >
+          <div class="d-flex option-level-03 mr-auto">
+            <img
+              src="images/level-03-option-1.png"
+              alt="option-1"
+              class="img-fluid d-block"
+            />
+          </div>
+          <div class="d-flex option-level-03 mr-auto">
+            <img
+              src="images/level-03-option-2.png"
+              alt="option-2"
+              class="img-fluid d-block"
+            />
+          </div>
+          <div class="d-flex option-level-03 mr-auto">
+            <img
+              src="images/level-03-option-3.png"
+              alt="option-3"
+              class="img-fluid d-block"
+            />
+          </div>
+          <div class="d-flex option-level-03">
+            <img
+              src="images/level-03-option-4.png"
+              alt="option-4"
+              class="img-fluid d-block"
+              style="width: 100% !important"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center flex-wrap">
+          <div
+            class="dropBox-level-03 mr-auto font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-03-1"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 mr-auto font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-03-2"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 mr-auto font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-03-3"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 font-weight-bold bg-success-light m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-03-4"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
+        <div
+          class="d-flex flex-wrap align-self-center flex-sm-nowrap mt-3"
+          id="options-level-03"
+        ></div>
+      </div>
+      <div class="col-12 d-none" id="level-04">
+        <div class="level level-transition text-warning">Level 04</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          The chloride ions have effect on corrosion. In metal pipes carrying
+          water, chloride increases the electrical conductivity and thus
+          __________ its corrosivity.
+        </h2>
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center mt-5 opacityAnimation"
+          id="options-level-04"
+        >
+          <h3 class="h3 text-dark bg-option p-3 rounded ml-auto mr-auto">
+            Increases
+          </h3>
+          <h3 class="h3 text-dark bg-option p-3 rounded ml-auto mr-auto">
+            Decreases
+          </h3>
+          <h3 class="h3 text-dark bg-option p-3 rounded ml-auto mr-auto">
+            Has no effect on corrosion
+          </h3>
+        </div>
+      </div>
+      <div class="col-12 d-none" id="level-05">
+        <div class="level level-transition text-warning">Level 05</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          As the chloride ions increase the electrical conductivity of water and
+          thus increases its corrosivity.
+        </h2>
+        <h3 class="h3 slideLeft text-wheat mt-3">
+          <span class="badge bg-warning mr-2 mr-sm-3 text-dark">?</span>Which types of corrosion out of the following, are affected by the
+          presence of chloride ions?
+        </h3>
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center mt-5 opacityAnimation"
+          id="options-level-05"
+        >
+          <img
+            src="../Amount-of-zinc-in-brass/images/galvanic_corrosion.jpg"
+            alt="galvanic_corrosion"
+            class="img-fluid d-block option-level-05"
+          />
+          <img
+            src="../Amount-of-zinc-in-brass/images/Hydrogen_embrittlement.jpg"
+            alt="Hydrogen_embrittlement"
+            class="img-fluid d-block option-level-05"
+          />
+          <img
+            src="../Amount-of-zinc-in-brass/images/pitting_corrosion.jpg"
+            alt="pitting_corrosion"
+            class="img-fluid d-block option-level-05"
+          />
+          <img
+            src="../Amount-of-zinc-in-brass/images/season_cracking.jpg"
+            alt="season_cracking"
+            class="img-fluid d-block option-level-05"
+          />
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-end mt-3">
+        <button
+          type="button"
+          id="next"
+          class="btn btn-success btn-sm pl-3 pr-3 mb-5 d-show"
+          onclick="Next()"
+        >
+          Next &#x27A4;
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
