@@ -5,8 +5,8 @@ function Next() {
   switch (levelNo) {
     case 1:
       if (checklevel01()) {
-        level02();
         nextLevel();
+        level02();
       }
       break;
     case 2:
@@ -23,8 +23,8 @@ function Next() {
       break;
     case 4:
       if (checklevel04()) {
-        level05();
         nextLevel();
+        level05();
       }
       break;
     case 5:

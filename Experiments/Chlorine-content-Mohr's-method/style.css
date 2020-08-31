@@ -114,6 +114,11 @@ body{
 .option-clicked{
     opacity: 0.4;
 }
+.option-level-05{
+    width: 30vw;
+    height: 30vw;
+    margin: 1em;
+}
 @media screen and (max-width: 600px){
     .h2{
         font-size: 1.2em;
@@ -152,9 +157,6 @@ body{
     }
     .option{
         width: 43.5vw;
-    }
-    .option-level-07{
-        width: 100vw;
     }
     .option-level-03{
         width: 20vw;

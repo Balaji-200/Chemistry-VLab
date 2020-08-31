@@ -76,18 +76,28 @@ function createOption(option, id) {
 //##############################################################################################//
 function level01() {
   const options = document.getElementById("options-level-01");
-  clickListener(options, "bg-warning");
+  for (let i = 0; i < options.children.length; i++) {
+    options.children[i].addEventListener("click", () => {
+      options.children[i].classList.add("bg-warning");
+    });
+  }
 }
 function checklevel01() {
+  var correctAnswers = 0;
   const options = document.getElementById("options-level-01");
   for (let i = 0; i <= options.children.length - 1; i++) {
     if (options.children[i].classList.contains("bg-warning")) {
-      if (options.children[i].classList.contains("correct")) return true;
-      else {
-        alert("Wrong Answer!!, Try Again");
-        window.location.href = "./landing-page.html";
+      if (!options.children[i].classList.contains("wrong")) {
+        correctAnswers++;
+      }else{
+        correctAnswers--;
       }
     }
+  }
+  if (correctAnswers == 4) return true;
+  else {
+    alert("Wrong Answer!!, Try Again");
+    window.location.href = "./landing-page.html";
   }
 }
 //##############################################################################################//
@@ -192,8 +202,7 @@ function level05() {
   const options = document.getElementById("options-level-05");
   for (let i = 0; i < options.children.length; i++) {
     options.children[i].addEventListener("click", () => {
-      if (clicks <= 1)
-        options.children[i].classList.add("option-clicked");
+      if (clicks <= 1) options.children[i].classList.add("option-clicked");
       clicks++;
     });
   }
@@ -203,15 +212,11 @@ function checklevel05() {
   const options = document.getElementById("options-level-05");
   for (let i = 0; i <= options.children.length - 1; i++) {
     if (options.children[i].classList.contains("option-clicked")) {
-      if (
-        options.children[i].getAttribute("alt") == "galvanic_corrosion"
-      ) {
+      if (options.children[i].getAttribute("alt") == "galvanic_corrosion") {
         correctAnswers++;
         continue;
       }
-      if (
-        options.children[i].getAttribute("alt") == "pitting_corrosion"
-      ) {
+      if (options.children[i].getAttribute("alt") == "pitting_corrosion") {
         correctAnswers++;
         continue;
       }
