@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemistry</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-purple">
+    <nav
+      class="mb-3 navbar navbar-light navbar-expand-sm bg-light sticky-top text-dark"
+    >
+      <div class="container justify-content-center">
+        <a href="../../index.html" class="navbar-brand">
+          <h2>Chemistry V-Labs</h2>
+        </a>
+      </div>
+      <div class="container justify-content-center">
+        <a href="../../index.html" type="button" class="btn btn-outline-primary"
+          >&#x1F3E0; Home</a
+        >
+      </div>
+    </nav>
+    <div class="container">
+      <div class="col-12 d-show" id="level-01">
+        <div class="level level-transition text-warning">Level 01</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          Choose the correct option
+        </h2>
+        <h3 class="h3 slideLeft text-wheat mt-3">
+          <span class="badge bg-warning mr-2 mr-sm-3 text-dark">?</span>The
+          series of reactions in the following image depicts
+          “____________________”
+        </h3>
+        <div
+          class="d-flex flex-nowrap justify-content-center align-items-center mt-5 opacityAnimation"
+        >
+          <img
+            src="images/level-01-option.jpg"
+            alt="level-01-option"
+            class="img-fluid d-block"
+          />
+        </div>
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center mt-5 opacityAnimation"
+          id="level-01-options"
+        >
+          <h3
+            class="option-level-01 rounded p-2 mr-auto ml-auto text-light text-center mt-sm mt-2"
+          >
+            Desalination of water
+          </h3>
+          <h3
+            class="option-level-01 rounded p-2 mr-auto ml-auto text-light text-center mt-2"
+          >
+            Origin of Hardness of water
+          </h3>
+          <h3
+            class="option-level-01 rounded p-2 mr-auto ml-auto text-light text-center mt-sm mt-2"
+          >
+            Scum formation in water
+          </h3>
+          <h3
+            class="option-level-01 rounded p-2 mr-auto ml-auto text-light text-center mt-sm mt-2"
+          >
+            Acidification of water
+          </h3>
+        </div>
+      </div>
+      <div class="col-12 d-none" id="level-02">
+        <div class="level level-transition text-warning">Level 02</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          Select any 6 ions from the following that make water Hard
+        </h2>
+        <h3 class="h3 slideLeft text-wheat mt-3">
+          <span class="badge bg-warning mr-2 mr-sm-3 text-dark">?</span>Drag and
+          drop your answers.
+        </h3>
+        <div class="d-flex justify-content-center flex-wrap align-items-center">
+          <div
+            class="dropBox-level-02 rounded mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-02-1"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 rounded mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-02-2"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 rounded mr mr-sm-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-02-3"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 rounded mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-02-4"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 rounded mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-02-5"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-02 rounded font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-02-6"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
+        <div
+          class="d-flex flex-wrap align-self-center justify-content-center flex-sm-nowrap mt-3 text-light"
+          id="level-02-options"
+        ></div>
+      </div>
+      <div class="col-12 d-none" id="level-03">
+        <div class="level level-transition text-warning">Level 03</div>
+        <h2 class="col-12 text-wheat h2 slideRight mt-3 p-sm p-0">
+          Drag and drop from the following- various drawbacks of using Hard
+          water.
+        </h2>
+        <div class="d-flex justify-content-center flex-wrap align-items-center">
+          <div
+            class="dropBox-level-03 rounded mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-03-1"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 rounded mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideRight"
+            id="drop-level-03-2"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 rounded mr mr-sm-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center opacityAnimation"
+            id="drop-level-03-3"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 rounded mr-sm-auto ml-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-03-4"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            class="dropBox-level-03 rounded m-sm mr-auto font-weight-bold m-1 mt-3 text-center d-flex align-items-center justify-content-center slideLeft"
+            id="drop-level-03-5"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
+        <div
+          class="d-flex flex-wrap align-self-center justify-content-center flex-sm-nowrap mt-3 text-light"
+          id="level-03-options"
+        ></div>
+      </div>
+      <div class="col-12 d-flex justify-content-end mt-3">
+        <button
+          type="button"
+          id="next"
+          class="btn btn-warning text-dark btn-sm pl-3 pr-3 mb-5 d-show"
+          onclick="Next()"
+        >
+          Next &#x27A4;
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
