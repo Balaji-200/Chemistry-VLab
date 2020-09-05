@@ -174,3 +174,123 @@ function checklevel03() {
   }
 }
 //##############################################################################################//
+function checklevel04() {
+  const option1 = document.getElementById("level-04-01");
+  const option2 = document.getElementById("level-04-02");
+  if (option1.value == "" || option2.value == "")
+    alert("Please label the images in the respective input boxes.");
+  if (
+    (option1.value.toLowerCase() == "soft water sample" ||
+      option1.value.toLowerCase() == "soft water") &&
+    (option2.value.toLowerCase() == "hard water sample" ||
+      option2.value.toLowerCase() == "hard water")
+  ) {
+    return true;
+  } else {
+    alert("Wrong Answer!! , Try Again.");
+    window.location.href = "./landing-page.html";
+  }
+}
+//##############################################################################################//
+function level05() {
+  var clicks = 0;
+  const options = document.getElementById("level-05-options");
+  for (let i = 0; i < options.children.length; i++) {
+    options.children[i].addEventListener("click", () => {
+      if (clicks <= 1)
+        options.children[i].classList.add("option-clicked-opacity");
+      clicks++;
+    });
+  }
+}
+function checklevel05() {
+  var correctAnswers = 0;
+  const options = document.getElementById("level-05-options");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("option-clicked-opacity")) {
+      if (options.children[i].getAttribute("alt") == "level-05-01") {
+        correctAnswers++;
+        continue;
+      }
+      if (options.children[i].getAttribute("alt") == "level-05-03") {
+        correctAnswers++;
+        continue;
+      }
+    }
+  }
+  if (correctAnswers == 2) {
+    return true;
+  } else {
+    alert("Wrong Answers!! , Try Again");
+    window.location.href = "./landing-page.html";
+  }
+}
+//##############################################################################################//
+function level06() {
+  const options = document.getElementById("level-06-options");
+  clickListener(options, "option-clicked-opacity");
+}
+function checklevel06() {
+  const options = document.getElementById("level-06-options");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("option-clicked-opacity")) {
+      if (options.children[i].children[0].getAttribute("alt") == "red-pill") {
+        return true;
+      } else {
+        alert("Wrong Answers!! , Try Again");
+        window.location.href = "./landing-page.html";
+      }
+    }
+  }
+}
+//##############################################################################################//
+function level07() {
+  const options = document.getElementById("level-07-options");
+  clickListener(options, "option-clicked-opacity");
+}
+function checklevel07() {
+  const options = document.getElementById("level-07-options");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("option-clicked-opacity")) {
+      if (options.children[i].getAttribute("alt") == "EDTA-2") return true;
+      else {
+        alert("Wrong Answer!!, Try Again");
+        window.location.href = "./landing-page.html";
+      }
+    }
+  }
+}
+//##############################################################################################//
+function level08() {
+  const slider = document.getElementById("slider");
+  const sliderVal = document.getElementById("slider-val");
+  slider.addEventListener("change", () => {
+    sliderVal.innerText = slider.value;
+  });
+}
+function checklevel08() {
+  const slider = document.getElementById("slider");
+  if (slider.value == 10) return true;
+  else {
+    alert("Wrong answer!!! , Try Again.");
+    window.location.href = "./landing-page.html";
+  }
+}
+//#############################################################################################//
+function level09() {
+  const options = document.getElementById("level-09-options");
+  clickListener(options, "option-clicked-opacity");
+}
+function checklevel09() {
+  const options = document.getElementById("level-09-options");
+  for (let i = 0; i <= options.children.length - 1; i++) {
+    if (options.children[i].classList.contains("option-clicked-opacity")) {
+      if (options.children[i].getAttribute("alt") == "level-09-1") return true;
+      else {
+        alert("Wrong Answer!!, Try Again");
+        window.location.href = "./landing-page.html";
+      }
+    }
+  }
+}
+//#############################################################################################//

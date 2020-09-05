@@ -155,7 +155,6 @@ function checkLevel04() {
     if (options.children[i].classList.contains("level-05-option-clicked"))
       if (options.children[i].classList.contains("correct")) correctAnswers++;
   }
-  console.log(slider.value);
   if (slider.value < 7) correctAnswers++;
   if (correctAnswers == 2) return true;
   else {

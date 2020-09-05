@@ -109,6 +109,38 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: large;
 }
+
+.level-04{
+    width: 50vw !important;
+}
+
+.level-05{
+    min-width: 30vw;
+    height: 30vw;
+}
+.level-06{
+    width: 20vw;
+    height: 20vw;
+}
+.level-07{
+    width: 30vw;
+}
+
+.range{
+    width: 100%;
+    appearance: none;
+    height: 100px;
+    outline: none;
+    background: linear-gradient(to right,red,yellow,green,blue,indigo);
+}
+.range::-webkit-slider-thumb{
+    appearance: none;
+    height: 110px;
+    width: 10px;
+    background-color:  #e7dcf8;
+    border: 1px ridge #E95420;
+    cursor: pointer;
+}
 @media screen and (max-width: 600px){
     .h2{
         font-size: 1.2em;
@@ -139,6 +171,23 @@ body{
     .level-03-option{
         width: 40vw;
         font-size: small;
+    }
+    .level-04{
+        width: 100% !important;
+    }
+    .level-05{
+        width: 100%;
+        height: 100%;
+    }
+    .level-06{
+        width: 40vw;
+        height: 40vw;
+    }
+    .range{
+        height: 60px;
+    }
+    .range::-webkit-slider-thumb{
+        height: 70px;
     }
 }
 
