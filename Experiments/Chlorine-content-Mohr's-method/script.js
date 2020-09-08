@@ -190,7 +190,7 @@ function checklevel04() {
         return true;
       } else {
         alert("Wrong Answers!! , Try Again");
-        window.location.href = "./demo.html";
+        window.location.href = "./landing-page.html";
       }
     }
   }

@@ -199,7 +199,7 @@ function checklevel05() {
         return true;
       else {
         alert("Wrong Answer!!, Try Again");
-        window.location.href = "./demo.html";
+        window.location.href = "./landing-page.html";
       }
     }
   }
@@ -234,7 +234,7 @@ function checklevel07() {
         return true;
       else {
         alert("Wrong Answer!!, Try Again");
-        window.location.href = "./demo.html";
+        window.location.href = "./landing-page.html";
       }
     }
   }
