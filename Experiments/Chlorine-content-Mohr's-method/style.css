@@ -119,6 +119,15 @@ body{
     height: 30vw;
     margin: 1em;
 }
+
+@media screen and (max-width: 900px){
+    .dropBox-level-03{
+        font-size: small;
+    }
+    .dropBox-level-02{
+        font-size: small;
+    }
+}
 @media screen and (max-width: 600px){
     .h2{
         font-size: 1.2em;
