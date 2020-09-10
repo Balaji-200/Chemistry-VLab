@@ -311,6 +311,7 @@
         if (
           $("select#titration").children("option:selected").val() == "standard"
         ) {
+          clearInterval(val);
           standard.innerText = 0;
           var off = Math.random() * (1.8 - 1.6) + 1.6;
           var num = Math.random() * (9.6 - 9.0) + 9.0;
@@ -325,6 +326,7 @@
         } else if (
           $("select#titration").children("option:selected").val() == "total"
         ) {
+          clearInterval(val);
           total.innerText = 0;
           var off = Math.random() * (1 - 0.8) + 0.8;
           var num = Math.random() * (5.5 - 5.0) + 5.0;
@@ -339,6 +341,7 @@
         } else if (
           $("select#titration").children("option:selected").val() == "permanent"
         ) {
+          clearInterval(val);
           permanent.innerText = 0;
           var off = Math.random() * (0.5 - 0.2) + 0.2;
           var num = Math.random() * (2.5 - 2) + 2;
