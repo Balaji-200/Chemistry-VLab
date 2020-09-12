@@ -255,6 +255,7 @@
       var back = document.getElementById("op2");
       var count;
       var val = 0;
+      var vblank, vback;
       $("button#start").click(function () {
         if (
           $("select#titration").children("option:selected").val() == "blank"
@@ -264,18 +265,23 @@
           video.currentTime = 0;
           video.play();
           val = setInterval(() => {
-            count += Math.random() * 2.5 + 1;
+            count += Math.random() * (7 - 5) + 5;
             blank.innerText = count.toFixed(1);
+            vblank = count;
           }, 1600);
+          video.onpause = () => clearInterval(val);
         } else if (
           $("select#titration").children("option:selected").val() == "back"
         ) {
+          console.log(vblank);
           clearInterval(val);
+          var tot = vblank - (Math.random() * (8.6 - 8.2) + 8.2);
+          var off = Math.random() * (2 - 0.5) + 0.5;
           count = 0;
           video.currentTime = 0;
           video.play();
           val = setInterval(() => {
-            count += Math.random() * 2 + 0.5;
+            count += (tot) / 5;
             back.innerText = count.toFixed(1);
           }, 1600);
           video.onpause = () => clearInterval(val);
