@@ -143,7 +143,7 @@ function level03() {
   const drop1 = document.getElementById("drop-level-03-1");
   const drop4 = document.getElementById("drop-level-03-4");
   drop1.style.animationDuration = "0.8s";
-  drop5.style.animationDuration = "0.8s";
+  drop4.style.animationDuration = "0.8s";
   level03options.map((option, index) => {
     options.appendChild(
       createOption(option, `-level-03-${index + 1}`, "level-03-option")
