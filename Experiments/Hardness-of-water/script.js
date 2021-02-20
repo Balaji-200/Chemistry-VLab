@@ -141,7 +141,7 @@ function checklevel02() {
 function level03() {
   const options = document.getElementById("level-03-options");
   const drop1 = document.getElementById("drop-level-03-1");
-  const drop5 = document.getElementById("drop-level-03-5");
+  const drop4 = document.getElementById("drop-level-03-4");
   drop1.style.animationDuration = "0.8s";
   drop5.style.animationDuration = "0.8s";
   level03options.map((option, index) => {
@@ -152,9 +152,9 @@ function level03() {
 }
 function checklevel03() {
   var wrongAnswers = [];
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 4; i++) {
     const drop = document.getElementById(`drop-level-03-${i}`);
-    for (let j = 1; j <= 5; j++) {
+    for (let j = 1; j <= 4; j++) {
       if (j === i) continue;
       const nextDrop = document.getElementById(`drop-level-03-${j}`);
       if (drop.innerHTML == nextDrop.innerHTML) {
