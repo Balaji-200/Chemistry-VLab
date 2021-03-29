@@ -9,24 +9,61 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/style.css" />
-    <title>Chemistry</title>
+    <title>Chemistry V-Labs</title>
   </head>
 
-  <body>
+  <body style="overflow-x: hidden;">
     <nav
-      class="mb-3 navbar navbar-light navbar-expand-sm bg-light sticky-top text-dark"
+      class="mb-3 navbar navbar-light navbar-expand-sm sticky-top bg-light text-dark"
     >
-      <div class="container justify-content-center">
-        <a href="#" class="navbar-brand">
-          <h2>Chemistry V-Labs</h2>
-        </a>
+      <div class="ml-0 ml-sm-5 flex-fill">
+          <a href="#" class="navbar-brand">
+            <!-- <img src="assets/VLABS.png" alt="VLABS Logo" class="logoImage" /> -->
+            <h3 >Chemistry V-Labs</h3>
+          </a>
+        </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mr-sm-5 justify-content-end " id="navbarTogglerDemo01">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item active ml-3 mr-3">
+            <a class="nav-link text-center" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item text-center ml-3 mr-3">
+            <a class="nav-link" id="aboutLink" href="#about">About</a>
+          </li>
+          <li class="nav-item text-center ml-3 mr-3">
+            <a class="nav-link" id="experimentsLink" href="#experiments">Experiments</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <div class="container">
-      <h2>Our Experiments:</h2>
+    <section class="background mt-5 mb-5 d-flex align-items-center justify-content-center">
+      <img src="./assets/Chemistry background.png" alt="Chemistry background image">
+    </section>
+
+    <section class="container d-flex flex-column align-items-center justify-content-center" id="about">
+      <h1 class="mb-4">About</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti temporibus nostrum possimus modi animi culpa obcaecati, quia dolor consequatur tempore nisi earum illum adipisci, voluptatem ipsa! Quia, dignissimos officia?</p>
+    </section>
+
+    <section class="container" id="experiments">
+      <h1 class="text-center mb-4 mt-5">Experiments</h1>
       <ul class="list-group ml-3 mr-3 mb-5">
         <a
           href="Experiments/Amount-of-zinc-in-brass/landing-page.html"
@@ -138,10 +175,13 @@
           </div>
         </a>
       </ul>
-    </div>
+    </section>
+    <footer class="d-flex flex-row justify-content-center align-items-center p-3 bg-light" style="border-top: 1px solid black;">
+      CopyRight&copy;2021-2022
+    </footer>
     <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <!-- <script
+    <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
@@ -150,6 +190,21 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
+    <script>
+      const experimentsLink = document.getElementById('experimentsLink')
+      const aboutLink = document.getElementById('aboutLink')
+      aboutLink.addEventListener("click", clickHandler);
+      experimentsLink.addEventListener("click", clickHandler);
+      function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetHeight + 150;
+        scroll({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
+    </script>
   </body>
 </html>
