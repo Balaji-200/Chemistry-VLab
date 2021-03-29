@@ -69,6 +69,13 @@ canvas {
     height: 60px;
   }
   #about p {
-    width: 90%;
+    width: 100%;
+    font-size: 1rem;
+  }
+  #about h1{
+    font-size: 2rem;
+  }
+  #experiments h1{
+    font-size: 2rem;
   }
 }
