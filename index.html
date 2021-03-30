@@ -58,10 +58,10 @@
     </section>
 
     <section class="container d-flex flex-column align-items-center justify-content-center" id="about">
-      <h1 class="mb-4">About</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti temporibus nostrum possimus modi animi culpa obcaecati, quia dolor consequatur tempore nisi earum illum adipisci, voluptatem ipsa! Quia, dignissimos officia?</p>
+      <h1 class="mb-3">About</h1>
+      <p class="pl-3 pr-3 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti temporibus nostrum possimus modi animi culpa obcaecati, quia dolor consequatur tempore nisi earum illum adipisci, voluptatem ipsa! Quia, dignissimos officia?</p>
     </section>
-
+        
     <section class="container" id="experiments">
       <h1 class="text-center mb-4 mt-5">Experiments</h1>
       <ul class="list-group ml-3 mr-3 mb-5">
@@ -199,7 +199,7 @@
       function clickHandler(e) {
         e.preventDefault();
         const href = this.getAttribute("href");
-        const offsetTop = document.querySelector(href).offsetHeight + 150;
+        const offsetTop = document.querySelector(href).offsetTop - 100;
         scroll({
           top: offsetTop,
           behavior: "smooth",
