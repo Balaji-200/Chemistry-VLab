@@ -7,3 +7,6 @@
 <p>Chemistry V-Lab was ideated and conceptualised by <b>Prof. Sonaali Borkar</b> and the content was developed by <b>Prof. Nilima Main</b> of Applied Science department of first year engineering of Vidyalakar Institute of Technology.</p>
 <p><b>Mr. Balaji Durai Masanam</b>, a second-year student of Electronics and Telecommunication, Vidyalankar Institute of Technology has developed the virtual laboratory for Engineering Chemistry.</p>
 <p><i><b>Note</b>: This lab is prepared purely for educational purpose and for usage by First Year Engineering students.</i></p>
+
+# Lab
+<a href="https://balaji-200.github.io/Chemistry-VLab/" target="_blank">Chemistry V-Lab</a>
