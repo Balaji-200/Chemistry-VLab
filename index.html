@@ -12,19 +12,26 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/card.css" />
     <title>Chemistry V-Labs</title>
   </head>
 
-  <body style="overflow-x: hidden;">
+  <body style="overflow-x: hidden">
     <nav
-      class="mb-3 navbar navbar-light navbar-expand-sm sticky-top bg-light text-dark"
+      class="
+        mb-3
+        navbar navbar-light navbar-expand-sm
+        sticky-top
+        bg-light
+        text-dark
+      "
     >
       <div class="ml-0 ml-sm-5 flex-fill">
-          <a href="#" class="navbar-brand">
-            <!-- <img src="assets/VLABS.png" alt="VLABS Logo" class="logoImage" /> -->
-            <h3 >Chemistry V-Labs</h3>
-          </a>
-        </div>
+        <a href="#" class="navbar-brand">
+          <!-- <img src="assets/VLABS.png" alt="VLABS Logo" class="logoImage" /> -->
+          <h3>Chemistry V-Labs</h3>
+        </a>
+      </div>
       <button
         class="navbar-toggler"
         type="button"
@@ -36,7 +43,10 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse mr-sm-5 justify-content-end " id="navbarTogglerDemo01">
+      <div
+        class="collapse navbar-collapse mr-sm-5 justify-content-end"
+        id="navbarTogglerDemo01"
+      >
         <ul class="navbar-nav mt-2 mt-lg-0">
           <li class="nav-item active ml-3 mr-3">
             <a class="nav-link text-center" href="#"
@@ -47,27 +57,149 @@
             <a class="nav-link" id="aboutLink" href="#about">About</a>
           </li>
           <li class="nav-item text-center ml-3 mr-3">
-            <a class="nav-link" id="experimentsLink" href="#experiments">Experiments</a>
+            <a class="nav-link" id="experimentsLink" href="#experiments"
+              >Experiments</a
+            >
           </li>
         </ul>
       </div>
     </nav>
 
-    <section class="background mt-5 mb-5 d-flex align-items-center justify-content-center">
-      <img src="./assets/Chemistry background.png" alt="Chemistry background image">
+    <section
+      class="
+        background
+        mt-5
+        mb-5
+        d-flex
+        align-items-center
+        justify-content-center
+      "
+    >
+      <img
+        src="./assets/Chemistry background.png"
+        alt="Chemistry background image"
+      />
     </section>
 
-    <section class="container d-flex flex-column align-items-center justify-content-center" id="about">
-      <h1 class="mb-3">About</h1>
-      <p class="pl-3 pr-3 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti temporibus nostrum possimus modi animi culpa obcaecati, quia dolor consequatur tempore nisi earum illum adipisci, voluptatem ipsa! Quia, dignissimos officia?</p>
+    <section class="container" id="about">
+      <h1 class="mb-3 text-center">About</h1>
+      <p class="pl-3 pr-3">
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>Chemistry V-Lab</b> is specifically prepared
+        on the concept of learn through games. As games have different levels to
+        pass through, V-Lab gives the similar experience to users. The students
+        can test their knowledge in initial levels in the form of nice visual
+        graphics. Once they clear all the knowledge game levels, they can go to
+        the last level which is simulation of experiment.
+      </p>
+      <p class="pl-3 pr-3">
+        &nbsp;&nbsp;&nbsp;&nbsp;The Objective of this virtual lab is to provide
+        remote access to experiments in Chemistry at the undergraduate level of
+        Engineering. Students can use any device as the software is user
+        friendly.
+      </p>
+      <p class="pl-3 pr-3">
+        &nbsp;&nbsp;&nbsp;&nbsp;Chemistry V-Lab was ideated and conceptualised
+        by <b>Prof. Sonaali Borkar</b> and the content was developed by
+        <b>Prof. Nilima Main</b> of Applied Science department of first year
+        engineering of Vidyalakar Institute of Technology.
+      </p>
+      <p class="pl-3 pr-3">
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>Mr. Balaji Durai Masanam</b>, a second-year
+        student of Electronics and Telecommunication, Vidyalankar Institute of
+        Technology has developed the virtual laboratory for Engineering
+        Chemistry.
+      </p>
+      <section
+        class="d-flex flex-wrap align-items-center justify-content-around"
+      >
+        <div class="card-container card-sonali mt-5">
+          <div
+            class="card-heading d-flex align-items-center justify-content-end"
+          >
+            <span style="padding: 16px"><b>&#9432;</b></span>
+          </div>
+          <div class="overlay">
+            <div class="items"></div>
+            <div class="items head">
+              <p style="font-size: x-large">Sonaali Borkar</p>
+              <hr />
+            </div>
+            <div class="items price">
+              <!-- <p></p> -->
+              <p style="line-height: 30px">Assistant Professor</p>
+              <p style="line-height: 20px">In-Charge, First Year Engineering</p>
+            </div>
+            <div class="items cart">
+              <span class="button-link"
+                ><a href="https://vit.edu.in/SonaaliBorkar.html"
+                  >Know More</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-container card-nilima mt-5">
+          <div
+            class="card-heading d-flex align-items-center justify-content-end"
+          >
+            <span style="padding: 16px"><b>&#9432;</b></span>
+          </div>
+          <div class="overlay">
+            <div class="items"></div>
+            <div class="items head">
+              <p style="font-size: x-large">Nilima Main</p>
+              <hr />
+            </div>
+            <div class="items price">
+              <p style="line-height: 30px">
+                Assistant Professor Engineering Chemistry
+              </p>
+            </div>
+            <div class="items cart">
+              <span class="button-link"
+                ><a href="https://vit.edu.in/NilimaMain.html"
+                  >Know More</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-container card-bala mt-5">
+          <div
+            class="card-heading d-flex align-items-center justify-content-end"
+          >
+            <span style="padding: 16px"><b>&#9432;</b></span>
+          </div>
+          <div class="overlay">
+            <div class="items"></div>
+            <div class="items head">
+              <p style="font-size: large">Balaji Durai Masanam</p>
+              <hr />
+            </div>
+            <div class="items price">
+              <p>
+                Second Year Student,Electronics & Telecommunication Engineering
+              </p>
+            </div>
+            <div class="items cart">
+              <span class="button-link"
+                ><a href="https://www.linkedin.com/in/balaji-durai-a216601ab/">Know More</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-        
+
     <section class="container" id="experiments">
       <h1 class="text-center mb-4 mt-5">Experiments</h1>
       <ul class="list-group ml-3 mr-3 mb-5">
         <a
           href="Experiments/Amount-of-zinc-in-brass/landing-page.html"
-          class="p-0 list-group-item list-group-item-action list-group-item-primary"
+          class="
+            p-0
+            list-group-item list-group-item-action list-group-item-primary
+          "
         >
           <div class="row align-items-center">
             <div class="col-3">
@@ -91,7 +223,10 @@
         </a>
         <a
           href="Experiments/Chlorine-content-Mohr's-method/landing-page.html"
-          class="p-0 list-group-item list-group-item-action list-group-item-warning"
+          class="
+            p-0
+            list-group-item list-group-item-action list-group-item-warning
+          "
         >
           <div class="row align-items-center">
             <div class="col-3">
@@ -120,7 +255,10 @@
         </a>
         <a
           href="Experiments/Chemical-oxygen-demand/landing-page.html"
-          class="p-0 list-group-item list-group-item-action list-group-item-success"
+          class="
+            p-0
+            list-group-item list-group-item-action list-group-item-success
+          "
         >
           <div class="row align-items-center">
             <div class="col-3">
@@ -145,7 +283,10 @@
         </a>
         <a
           href="Experiments/Hardness-of-water/landing-page.html"
-          class="p-0 list-group-item list-group-item-action list-group-item-danger"
+          class="
+            p-0
+            list-group-item list-group-item-action list-group-item-danger
+          "
         >
           <div class="row align-items-center">
             <div class="col-3">
@@ -176,8 +317,24 @@
         </a>
       </ul>
     </section>
-    <footer class="d-flex flex-row justify-content-center align-items-center p-3 bg-light" style="border-top: 1px solid black;">
-      CopyRight&copy;2021-2022
+    <footer
+      class="
+        d-flex
+        flex-column
+        justify-content-center
+        align-items-center
+        p-3
+        bg-light
+      "
+      style="border-top: 1px solid black"
+    >
+      <div>Copyright:</div>
+      <div>
+        <a href="https://vit.edu.in/" target="_blank"
+          >Vidyalakar Institute of Technology</a
+        >
+      </div>
+      <div>&copy;<span id="year"></span></div>
     </footer>
     <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
@@ -192,14 +349,23 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const experimentsLink = document.getElementById('experimentsLink')
-      const aboutLink = document.getElementById('aboutLink')
+      const experimentsLink = document.getElementById("experimentsLink");
+      const aboutLink = document.getElementById("aboutLink");
+      const yr = new Date().getFullYear();
+      document.getElementById("year").innerText = `${yr}-${yr + 1}`;
+      const windowWidth = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
       aboutLink.addEventListener("click", clickHandler);
       experimentsLink.addEventListener("click", clickHandler);
+      let off;
+      off = windowWidth > 600 ? 100 : 200;
       function clickHandler(e) {
         e.preventDefault();
+        $(".navbar-collapse").collapse("hide");
         const href = this.getAttribute("href");
-        const offsetTop = document.querySelector(href).offsetTop - 100;
+        const offsetTop = document.querySelector(href).offsetTop - off;
         scroll({
           top: offsetTop,
           behavior: "smooth",

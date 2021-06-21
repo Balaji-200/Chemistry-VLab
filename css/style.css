@@ -51,7 +51,7 @@ canvas {
   outline-color: grey; 
 }
 #about p {
-  width: 50%;
+  /* width: 50%; */
   font-size: 1.2rem;
 }
 @media screen and (max-width: 600px) {
@@ -78,5 +78,11 @@ canvas {
   }
   #experiments h1{
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbar-brand h3{
+    font-size: 1.4rem;
   }
 }
