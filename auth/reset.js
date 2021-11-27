@@ -66,15 +66,15 @@ resetForm.addEventListener("submit", (e) => {
         if (res.status === 200) {
           let cnf = confirm(response["message"]);
           if (cnf) window.location.href = "/auth/login.html";
-          else window.location.href = "/";
+          else window.location.href = "/Chemistry-VLab/";
         } else {
           alert("Something went wrong :( \n Try again later!");
-          window.location.href = "/";
+          window.location.href = "/Chemistry-VLab/";
         }
       })
       .catch((err) => {
         alert("Something went wrong :( \n Try again later!");
-        window.location.href = "/";
+        window.location.href = "/Chemistry-VLab/";
       });
   }
 });

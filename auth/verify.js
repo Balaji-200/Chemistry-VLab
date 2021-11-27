@@ -48,21 +48,22 @@ window.onload = () => {
         data["username"];
       userInfo.appendChild(document.createElement("p")).innerText =
         data["email"];
-      if (data["isAdmin"]) {
-        let downloadButton = document.createElement("button");
-        downloadButton.textContent = "Download";
-        downloadButton.classList.add("btn", "btn-success");
-        downloadButton.addEventListener("click", () =>
-          download(url, "list.csv")
-        );
-        userInfo.appendChild(downloadButton);
-      }
+      // if (data["isAdmin"]) {
+      //   let downloadButton = document.createElement("button");
+      //   downloadButton.textContent = "Download";
+      //   downloadButton.classList.add("btn", "btn-success");
+      //   downloadButton.addEventListener("click", () =>
+      //     download(url, "list.csv")
+      //   );
+      //   userInfo.appendChild(downloadButton);
+      // }
     });
 };
 
 const logout = () => {
-  if (!document.cookie) {
-    window.location.href = "";
+  let cookie = parseCookie(document.cookie)
+  if (!cookie["tk"]) {
+    window.location.href = "/Chemistry-VLab/";
     return;
   }
   experiments.classList.remove("d-block");
@@ -81,30 +82,30 @@ const logout = () => {
   })
     .then((res) => {
       document.cookie = `tk=;expires=${new Date().getTime()};path=/;same-site=strict`;
-      window.location.href = "/";
+      window.location.href = "/Chemistry-VLab/";
     })
     .catch((err) => {
       alert("Something went wrong :( \n Try again!");
-      window.location.href = "/";
+      window.location.href = "/Chemistry-VLab/";
     });
 };
 
-const download = (url, filename) => {
-  let cookie = parseCookie(document.cookie);
-  fetch(url, {
-    method: "GET",
-    mode: "cors",
-    headers: {
-      Authorization: `Bearer ${cookie["tk"]}`,
-    },
-  })
-    .then((response) => response.blob())
-    .then((blob) => {
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = filename;
-      link.click();
-      return;
-    })
-    .catch(console.error);
-};
+// const download = (url, filename) => {
+//   let cookie = parseCookie(document.cookie);
+//   fetch(url, {
+//     method: "GET",
+//     mode: "cors",
+//     headers: {
+//       Authorization: `Bearer ${cookie["tk"]}`,
+//     },
+//   })
+//     .then((response) => response.blob())
+//     .then((blob) => {
+//       const link = document.createElement("a");
+//       link.href = URL.createObjectURL(blob);
+//       link.download = filename;
+//       link.click();
+//       return;
+//     })
+//     .catch(console.error);
+// };

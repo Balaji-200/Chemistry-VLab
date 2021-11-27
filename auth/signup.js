@@ -50,7 +50,7 @@ signupForm.addEventListener("submit", (e) => {
     if (data.success) cnf(data.message);
     else {
       alert("Something went wrong :( \n Try again later.");
-      window.location.href = "/";
+      window.location.href = "/Chemistry-VLab/";
     }
   });
 });
@@ -58,5 +58,5 @@ signupForm.addEventListener("submit", (e) => {
 const cnf = (str) => {
   let cnf = confirm(str);
   if (cnf) window.location.href = "/auth/login.html";
-  else window.location.href = "/";
+  else window.location.href = "/Chemistry-VLab/";
 };

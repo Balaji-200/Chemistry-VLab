@@ -47,12 +47,12 @@ loginForm.addEventListener("submit", (e) => {
           data["token"] || ""
         };expires=${date.toUTCString()};path=/;same-site=strict`;
         let cnf = confirm("Successfully Logged in!!!");
-        if (cnf) window.location.href = "/Experiments/experiments.html";
-        window.location.href = "/Experiments/experiments.html";
+        if (cnf) window.location.href = "/Experiments/index.html";
+        window.location.href = "/Experiments/index.html";
       }
     })
     .catch((err) => {
       alert("Something went wrong :( \n Try again later!");
-      window.location.href = "/";
+      window.location.href = "/Chemistry-VLab/";
     });
 });

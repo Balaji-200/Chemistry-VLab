@@ -31,11 +31,11 @@ linkForm.addEventListener("submit", (e) => {
         window.location.href = "/auth/login.html";
       } else {
         alert("Something went wrong :( \n Try again later!");
-        window.location.href = "/";
+        window.location.href = "/Chemistry-VLab/";
       }
     })
     .catch((err) => {
       alert("Something went wrong :( \n Try again later!");
-      window.location.href = "/";
+      window.location.href = "/Chemistry-VLab/";
     });
 });
