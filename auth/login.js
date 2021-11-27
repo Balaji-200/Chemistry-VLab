@@ -47,8 +47,8 @@ loginForm.addEventListener("submit", (e) => {
           data["token"] || ""
         };expires=${date.toUTCString()};path=/;same-site=strict`;
         let cnf = confirm("Successfully Logged in!!!");
-        if (cnf) window.location.href = "/Experiments/index.html";
-        window.location.href = "/Experiments/index.html";
+        if (cnf) window.location.href = "/Experiments/";
+        window.location.href = "/Experiments/";
       }
     })
     .catch((err) => {

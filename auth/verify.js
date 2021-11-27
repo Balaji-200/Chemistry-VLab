@@ -48,15 +48,6 @@ window.onload = () => {
         data["username"];
       userInfo.appendChild(document.createElement("p")).innerText =
         data["email"];
-      // if (data["isAdmin"]) {
-      //   let downloadButton = document.createElement("button");
-      //   downloadButton.textContent = "Download";
-      //   downloadButton.classList.add("btn", "btn-success");
-      //   downloadButton.addEventListener("click", () =>
-      //     download(url, "list.csv")
-      //   );
-      //   userInfo.appendChild(downloadButton);
-      // }
     });
 };
 
@@ -89,23 +80,3 @@ const logout = () => {
       window.location.href = "/Chemistry-VLab/";
     });
 };
-
-// const download = (url, filename) => {
-//   let cookie = parseCookie(document.cookie);
-//   fetch(url, {
-//     method: "GET",
-//     mode: "cors",
-//     headers: {
-//       Authorization: `Bearer ${cookie["tk"]}`,
-//     },
-//   })
-//     .then((response) => response.blob())
-//     .then((blob) => {
-//       const link = document.createElement("a");
-//       link.href = URL.createObjectURL(blob);
-//       link.download = filename;
-//       link.click();
-//       return;
-//     })
-//     .catch(console.error);
-// };
