@@ -9,14 +9,22 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <meta
+      name="description"
+      content="Chemistry V-Lab is specifically prepared
+    on the concept of learn through games. As games have different levels to
+    pass through, V-Lab gives the similar experience to users. The students
+    can test their knowledge in initial levels in the form of nice visual
+    graphics. Once they clear all the knowledge game levels, they can go to
+    the last level which is simulation of experiment."
+    />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/card.css" />
     <title>Chemistry V-Labs</title>
   </head>
 
-  <body style="overflow-x: hidden">
+  <body>
     <nav
       class="
         mb-3
@@ -28,7 +36,6 @@
     >
       <div class="ml-0 ml-sm-5 flex-fill">
         <a href="#" class="navbar-brand">
-          <!-- <img src="assets/VLABS.png" alt="VLABS Logo" class="logoImage" /> -->
           <h3>Chemistry V-Labs</h3>
         </a>
       </div>
@@ -53,11 +60,17 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item text-center ml-3 mr-3">
+          <li class="nav-item text-center active ml-3 mr-3">
             <a class="nav-link" id="aboutLink" href="#about">About</a>
           </li>
-          <li class="nav-item text-center ml-3 mr-3">
-            <a class="nav-link" id="experimentsLink" href="#experiments"
+          <li class="nav-item text-center active ml-3 mr-3">
+            <a href="auth/login.html" class="nav-link">SignIn/SignUp</a>
+          </li>
+          <li class="nav-item text-center active ml-3 mr-3">
+            <a
+              class="nav-link"
+              id="experimentsLink"
+              href="Experiments/experiments.html"
               >Experiments</a
             >
           </li>
@@ -76,7 +89,7 @@
       "
     >
       <img
-        src="./assets/Chemistry background.png"
+        src="./assets/Chemistry background (1).png"
         alt="Chemistry background image"
       />
     </section>
@@ -121,14 +134,15 @@
             </div>
             <div class="items price">
               <!-- <p></p> -->
-              <p style="line-height: 30px">
-                Assistant Professor,
-              </p>
+              <p style="line-height: 30px">Assistant Professor,</p>
               <p style="line-height: 20px">Engineering Chemistry</p>
             </div>
             <div class="items cart">
               <span class="button-link"
-                ><a href="https://vit.edu.in/SonaaliBorkar.html" target="_blank"
+                ><a
+                  href="https://vit.edu.in/SonaaliBorkar.html"
+                  target="_blank"
+                  rel="noreferrer"
                   >Know More</a
                 ></span
               >
@@ -150,7 +164,10 @@
             </div>
             <div class="items cart">
               <span class="button-link"
-                ><a href="https://vit.edu.in/NilimaMain.html" target="_blank"
+                ><a
+                  href="https://vit.edu.in/NilimaMain.html"
+                  target="_blank"
+                  rel="noreferrer"
                   >Know More</a
                 ></span
               >
@@ -174,6 +191,7 @@
               <span class="button-link"
                 ><a
                   href="https://www.linkedin.com/in/balaji-durai-a216601ab/"
+                  rel="noreferrer"
                   target="_blank"
                   >Know More</a
                 ></span
@@ -185,132 +203,6 @@
       </section>
     </section>
 
-    <section class="container" id="experiments">
-      <h1 class="text-center mb-4 mt-5">Experiments</h1>
-      <ul class="list-group ml-3 mr-3 mb-5">
-        <a
-          href="Experiments/Amount-of-zinc-in-brass/landing-page.html"
-          class="
-            p-0
-            list-group-item list-group-item-action list-group-item-primary
-          "
-        >
-          <div class="row align-items-center">
-            <div class="col-3">
-              <img
-                src="assets/zinc_in_brass.jpg"
-                class="img-fluid d-block"
-                alt="chem"
-              />
-            </div>
-            <div class="col text-dark">
-              <h5>
-                <u>To Estimate the amount of Zinc in the sample of Brass.</u>
-              </h5>
-              <p class="d-none d-sm-block">
-                <span class="h6"><u>Learning Objective</u>:</span>
-                Students will be able to understand the procedure to find out
-                percentage of Zinc in the Brass solution.
-              </p>
-            </div>
-          </div>
-        </a>
-        <a
-          href="Experiments/Chlorine-content-Mohr's-method/landing-page.html"
-          class="
-            p-0
-            list-group-item list-group-item-action list-group-item-warning
-          "
-        >
-          <div class="row align-items-center">
-            <div class="col-3">
-              <img
-                src="assets/chlorine_exp.jpg"
-                class="img-fluid d-block"
-                alt="chem"
-              />
-            </div>
-            <div class="col text-dark">
-              <h5>
-                <u
-                  >To determine Chloride content of water sample by Mohr’s
-                  method.</u
-                >
-              </h5>
-              <h6 class="d-none d-sm-block"><u>Learning Objective</u>:</h6>
-              <p class="d-none d-sm-block">
-                1) Students will be able to understand the significance of
-                chloride ions in water sample. <br />
-                2) Students will be able to analyse any water sample for its
-                chloride content.
-              </p>
-            </div>
-          </div>
-        </a>
-        <a
-          href="Experiments/Chemical-oxygen-demand/landing-page.html"
-          class="
-            p-0
-            list-group-item list-group-item-action list-group-item-success
-          "
-        >
-          <div class="row align-items-center">
-            <div class="col-3">
-              <img src="assets/COD.jpg" class="img-fluid d-block" alt="chem" />
-            </div>
-            <div class="col text-dark">
-              <h5>
-                <u
-                  >To determine Chemical Oxygen Demand (COD) of the given water
-                  sample.</u
-                >
-              </h5>
-              <h6 class="d-none d-sm-block"><u>Learning Objective</u>:</h6>
-              <p class="d-none d-sm-block">
-                1) Students will be able to understand the significance of
-                dissolved oxygen in any water body. <br />
-                2) Students will able to analyse any water sample for its
-                dissolved oxygen content.
-              </p>
-            </div>
-          </div>
-        </a>
-        <a
-          href="Experiments/Hardness-of-water/landing-page.html"
-          class="
-            p-0
-            list-group-item list-group-item-action list-group-item-danger
-          "
-        >
-          <div class="row align-items-center">
-            <div class="col-3">
-              <img
-                src="assets/Hard_water.jpg"
-                class="img-fluid d-block"
-                alt="chem"
-                style="border: 1px solid black"
-              />
-            </div>
-            <div class="col text-dark">
-              <h5>
-                <u
-                  >To determine total, temporary and permanent hardness of water
-                  by EDTA method.</u
-                >
-              </h5>
-              <h6 class="d-none d-sm-block"><u>Learning Objective</u>:</h6>
-              <p class="d-none d-sm-block">
-                1) Students will be able to understand the difference between
-                soft and hard water & drawbacks of using hard water.
-                <br />
-                2) Students will be able to analyse any water sample for its
-                hardness content.
-              </p>
-            </div>
-          </div>
-        </a>
-      </ul>
-    </section>
     <footer
       class="
         d-flex
@@ -319,19 +211,23 @@
         align-items-center
         p-3
         bg-light
+        mt-5
       "
       style="border-top: 1px solid black"
     >
       <div>Copyright:</div>
       <div>
-        <a href="https://vit.edu.in/" target="_blank"
+        <a
+          class="text-dark font-weight-bold"
+          href="https://vit.edu.in/"
+          target="_blank"
+          rel="noreferrer"
           >Vidyalakar Institute of Technology</a
         >
       </div>
       <div>&copy;<span id="year"></span></div>
     </footer>
-    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -343,7 +239,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const experimentsLink = document.getElementById("experimentsLink");
+      // const experimentsLink = document.getElementById("experimentsLink");
       const aboutLink = document.getElementById("aboutLink");
       const yr = new Date().getFullYear();
       document.getElementById("year").innerText = `${yr}-${yr + 1}`;
@@ -352,7 +248,7 @@
         window.innerWidth || 0
       );
       aboutLink.addEventListener("click", clickHandler);
-      experimentsLink.addEventListener("click", clickHandler);
+      // experimentsLink.addEventListener("click", clickHandler);
       let off;
       off = windowWidth > 600 ? 100 : 200;
       function clickHandler(e) {

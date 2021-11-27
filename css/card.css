@@ -59,7 +59,7 @@
 }
 
 .card-sonali {
-  background: url("../assets/sonaali-mam.jpeg");
+  background: url("../assets/Prof.\ Sonaali.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -70,16 +70,16 @@
 }
 
 .card-sonali .head hr {
-  border-color: #f199a9;
+  border-color: #f9d458;
 }
 
 .card-sonali .button-link {
-  border-color: #f199a9;
-  color: #f199a9;
+  border-color: #f9d458;
+  color: #f9d458;
 }
 
 .card-sonali .button-link:hover {
-  background-color: #f199a9;
+  background-color: #f9d458;
   color: black;
 }
 
@@ -233,14 +233,13 @@
   opacity: 0;
 }
 
-.card-container:hover .tap{
+.card-container:hover .tap {
   transition: all 0.5s;
   opacity: 0;
 }
 
 @media screen and (max-width: 600px) {
-  .tap{
+  .tap {
     opacity: 1;
   }
-  
 }

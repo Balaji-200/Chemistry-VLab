@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemistry V-Labs - Signup</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav
+      class="
+        mb-3
+        navbar navbar-light navbar-expand-sm
+        sticky-top
+        bg-light
+        text-dark
+      "
+    >
+      <div class="ml-0 ml-sm-5 flex-fill">
+        <a href="../index.html" class="navbar-brand">
+          <h3>Chemistry V-Labs</h3>
+        </a>
+      </div>
+    </nav>
+    <section
+      class="d-flex align-items-center justify-content-center"
+      id="lgForm"
+    >
+      <div class="d-none" id="loader">
+        <img
+          class="loader"
+          src="../assets/VLABS.png"
+          alt="Chemistry V-Lab logo"
+          width="100"
+          height="100"
+        />
+        <h4 class="text-center mt-3 pl-3">Loading...</h4>
+      </div>
+      <div id="form" class="text-center m-3 d-block">
+        <img
+          src="../assets/VLABS.png"
+          alt="Chemistry V-Lab logo"
+          width="100"
+          height="100"
+        />
+        <div
+          class="d-flex align-items-center justify-content-between mt-4 mb-5"
+        >
+          <h1 class="font-weight-normal text-left">SignUp</h1>
+          <a href="../index.html" type="button" class="btn btn-primary"
+            >&#x1F3E0;</a
+          >
+        </div>
+        <form id="signupForm">
+          <div class="form-group text-left mb-4">
+            <label for="username" class="h5 font-weight-bold">Full name</label>
+            <input
+              type="text"
+              id="username"
+              class="form-control"
+              placeholder="Enter your full name"
+              required
+              autofocus
+            />
+          </div>
+          <div class="form-group text-left mb-4">
+            <label for="email" class="h5 font-weight-bold">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+          <div class="form-group text-left mb-4">
+            <label for="nameOfInst" class="h5 font-weight-bold"
+              >Name of Institute</label
+            >
+            <input
+              class="form-control"
+              type="text"
+              autocomplete="organization-title"
+              id="nameOfInst"
+              placeholder="Enter your Institution name"
+              required
+            />
+          </div>
+          <div class="form-group text-left mb-4">
+            <label for="password" class="h5 font-weight-bold">Password</label>
+            <input
+              id="password"
+              type="password"
+              class="form-control"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="form-group text-left">
+            <label for="password" class="h5 font-weight-bold"
+              >Confirm Password</label
+            >
+            <input
+              id="cnfPassword"
+              type="password"
+              class="form-control"
+              placeholder="Enter your password again"
+              required
+            />
+          </div>
+          <div class="alert alert-warning text-left">
+            <h6 class="alert-heading font-weight-bold">Note:</h6>
+            <p>Password should contain the following:-</p>
+            <ol style="padding-left: 32px">
+              <li>
+                <p class="m-0">Should be atleast 8 characters long.</p>
+              </li>
+              <li>
+                <p class="m-0">Should contain special characters like !@#$%.</p>
+              </li>
+              <li>
+                <p class="m-0">
+                  Should contain numbers but should <b>not</b> start with
+                  numbers.
+                </p>
+              </li>
+            </ol>
+            <p>eg:- P@$$WORD#123</p>
+          </div>
+          <div class="form-group text-right">
+            <button type="reset" class="btn btn-lg btn-secondary mt-4 mr-2">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-lg btn-primary mt-4">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="signup.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxrtQxDyAzhPfF-5S5n8Wghqx614yTYiM&libraries=places&callback=initialize"
+    ></script>
+  </body>
+</html>

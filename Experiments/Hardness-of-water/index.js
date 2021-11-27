@@ -1,3 +1,18 @@
+const parseCookie = (str) =>
+  str
+    .split(";")
+    .map((v) => v.split("="))
+    .reduce((acc, v) => {
+      acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
+      return acc;
+    }, {});
+window.addEventListener("load", () => {
+  let cookie = parseCookie(document.cookie)
+  if (!cookie["tk"]) {
+    alert("Please Login!");
+    window.location.href = "/auth/login.html";
+  }
+});
 const game = document.getElementById("game");
 // const level01 = document.getElementById('level-01');
 var levelNo = 1;
@@ -33,25 +48,25 @@ function Next() {
       }
       break;
     case 6:
-      if(checklevel06()){
+      if (checklevel06()) {
         nextLevel();
         level07();
       }
       break;
     case 7:
-      if(checklevel07()){
+      if (checklevel07()) {
         nextLevel();
         level08();
       }
       break;
     case 8:
-      if(checklevel08()){
+      if (checklevel08()) {
         nextLevel();
         level09();
       }
       break;
     case 9:
-      if(checklevel09()){
+      if (checklevel09()) {
         nextLevel();
       }
   }

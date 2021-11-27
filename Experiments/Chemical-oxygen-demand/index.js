@@ -1,3 +1,18 @@
+const parseCookie = (str) =>
+  str
+    .split(";")
+    .map((v) => v.split("="))
+    .reduce((acc, v) => {
+      acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
+      return acc;
+    }, {});
+window.addEventListener("load", () => {
+  let cookie = parseCookie(document.cookie)
+  if (!cookie["tk"]) {
+    alert("Please Login!");
+    window.location.href = "/auth/login.html";
+  }
+});
 const game = document.getElementById("game");
 // const level01 = document.getElementById('level-01');
 var levelNo = 1;
