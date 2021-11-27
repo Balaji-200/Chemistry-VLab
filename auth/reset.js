@@ -23,16 +23,16 @@ window.addEventListener("load", () => {
           res.json().then((response) => (globalThis.user = response["user"]));
         } else {
           alert("Invalid Token \n Try Again!!");
-          window.location.href = "/auth/login.html";
+          window.location.href = "/Chemistry-VLab/auth/login.html";
         }
       })
       .catch((err) => {
         alert("Invalid Token \n Try Again!!");
-        window.location.href = "/auth/login.html";
+        window.location.href = "/Chemistry-VLab/auth/login.html";
       });
   else {
     alert("Invalid Token \n Try Again!!");
-    window.location.href = "/auth/login.html";
+    window.location.href = "/Chemistry-VLab/auth/login.html";
   }
 });
 
@@ -65,7 +65,7 @@ resetForm.addEventListener("submit", (e) => {
         let response = await res.json();
         if (res.status === 200) {
           let cnf = confirm(response["message"]);
-          if (cnf) window.location.href = "/auth/login.html";
+          if (cnf) window.location.href = "/Chemistry-VLab/auth/login.html";
           else window.location.href = "/Chemistry-VLab/";
         } else {
           alert("Something went wrong :( \n Try again later!");

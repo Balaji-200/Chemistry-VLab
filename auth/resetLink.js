@@ -28,7 +28,7 @@ linkForm.addEventListener("submit", (e) => {
       let response = await res.json();
       if (res.status === 200 || res.status === 401) {
         alert(response["message"]);
-        window.location.href = "/auth/login.html";
+        window.location.href = "/Chemistry-VLab/auth/login.html";
       } else {
         alert("Something went wrong :( \n Try again later!");
         window.location.href = "/Chemistry-VLab/";

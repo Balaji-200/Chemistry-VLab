@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   let cookie = parseCookie(document.cookie)
   if (!cookie["tk"]) {
     alert("Please Login!");
-    window.location.href = "/auth/login.html";
+    window.location.href = "/Chemistry-VLab/auth/login.html";
   }
 });
 const game = document.getElementById("game");

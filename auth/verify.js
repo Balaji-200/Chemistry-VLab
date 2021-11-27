@@ -14,8 +14,8 @@ const loader = document.getElementById("loader");
 window.onload = () => {
   if (!document.cookie) {
     let cnf = confirm("Please login!!");
-    if (cnf) window.location.href = "/auth/login.html";
-    else window.location.href = "/";
+    if (cnf) window.location.href = "/Chemistry-VLab/auth/login.html";
+    else window.location.href = "/Chemistry-VLab/";
     return;
   }
   let cook = parseCookie(document.cookie);
@@ -32,8 +32,8 @@ window.onload = () => {
     .then((res) => {
       if (res.status == 401) {
         let cnf = confirm("Please login!!");
-        if (cnf) window.location.href = "/auth/login.html";
-        else window.location.href = "/";
+        if (cnf) window.location.href = "/Chemistry-VLab/auth/login.html";
+        else window.location.href = "/Chemistry-VLab/";
         return;
       }
       return res.json();

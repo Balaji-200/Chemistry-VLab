@@ -57,6 +57,6 @@ signupForm.addEventListener("submit", (e) => {
 
 const cnf = (str) => {
   let cnf = confirm(str);
-  if (cnf) window.location.href = "/auth/login.html";
+  if (cnf) window.location.href = "/Chemistry-VLab/auth/login.html";
   else window.location.href = "/Chemistry-VLab/";
 };
