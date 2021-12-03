@@ -9,16 +9,16 @@
 }
 
 .card-nilima .head hr {
-  border-color: #fef5df;
+  border-color: #a6a961;
 }
 
 .card-nilima .button-link {
-  border-color: #fef5df;
-  color: #fef5df;
+  border-color: #a6a961;
+  color: #a6a961;
 }
 
 .card-nilima .button-link:hover {
-  background-color: #fef5df;
+  background-color: #a6a961;
   color: black;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .card-bala {
-  background: url("../assets/bala.jpeg");
+  background: url("../assets/bala.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,16 +45,16 @@
 }
 
 .card-bala .head hr {
-  border-color: #e8b07b;
+  border-color: #98c3ee;
 }
 
 .card-bala .button-link {
-  border-color: #e8b07b;
-  color: #e8b07b;
+  border-color: #98c3ee;
+  color: #98c3ee;
 }
 
 .card-bala .button-link:hover {
-  background-color: #e8b07b;
+  background-color: #98c3ee;
   color: black;
 }
 
@@ -85,7 +85,7 @@
 
 .card-container {
   width: 300px;
-  height: 400px;
+  height: 389px;
   position: relative;
   background-color: black;
   background-size: 100%;
